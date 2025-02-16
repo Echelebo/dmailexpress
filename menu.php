@@ -18,6 +18,9 @@
     -->
     <link href="assets/css/vendor.min.css" rel="stylesheet"/>
     <link href="assets/css/style.css" rel="stylesheet"/>
+
+    <script src="//code.jivosite.com/widget/mmz9qrDYLr" async></script>
+
   </head>
   <body>
     <div class="preloader">
@@ -50,6 +53,8 @@
                               <li class="nav-item active"><a href="/" data-toggle="dropdown"><span>Home</span></a>
 
                               </li>
+
+                              <li class="nav-item"><a href="tracking.php"><span>Track & Trace</span></a></li>
                               <li class="nav-item has-dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown"><span>company</span></a>
                                               <ul class="dropdown-menu">
                                                 <li class="nav-item"><a href="page-about.php"><span>about us</span></a></li>
@@ -92,6 +97,14 @@
                                 </ul>
                               </li>
 
+                              <li class="nav-item has-dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown"><span>features</span></a>
+                                              <ul class="dropdown-menu">
+                                                <li class="nav-item"><a href="request-quote.php"><span>request a quote</span></a></li>
+
+                                                <li class="nav-item"><a href="faqs.php"><span>help &amp; fAQs</span></a></li>
+                                              </ul>
+                              </li>
+
 
                               <li class="nav-item"><a href="contact.php"><span>contact</span></a></li>
                             </ul>
@@ -120,7 +133,7 @@
                 </div>
                 <!--  End .module-search-->
                 <!-- Start .module-contact-->
-                <div class="module-contact-x"><a class="btn btn--primary" href="tracking.php">Track & Trace</a></div>
+                <div class="module-contact"><a class="btn btn--primary" href="tracking.php">Track & Trace</a></div>
                 <!-- Start .module-language-->
 
               </div>
