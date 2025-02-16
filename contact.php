@@ -4,9 +4,7 @@
       Google Maps Section
       ============================
       -->
-      <section class="map map-2">
-        <iframe class="map-gray" src="https://maps.google.com/maps?q=Pioneer%20Works&amp;t=m&amp;z=13&amp;output=embed&amp;iwloc=near" width="600" height="450" style="border:0;"></iframe>
-      </section>
+
       <!--
       ============================
       Contact Information Section
@@ -21,22 +19,13 @@
                   <div class="contact-details">
                     <h6>contact details</h6>
                     <ul class="list-unstyled info">
-                      <li><span class="fas fa-map-marker-alt"></span><a href="javascript:void(0)">New York 11226 United States.</a></li>
+                      <li><span class="fas fa-map-marker-alt"></span><a href="javascript:void(0)">Selahattin Eyyubi Mah. 1538 Sok. No:41, Istanbul, Turkey</a></li>
                       <li><span class="fas fa-envelope"></span><a href="mailto::contact@elexpressfreight.com">contact@elexpressfreight.com</a></li>
-                      <li><span class="fas fa-phone-alt"></span><a href="tel:01061245741">(002) 01061245741</a></li>
+                      <li><span class="fas fa-phone-alt"></span><a href="tel:905488223973">+905488223973</a></li>
                     </ul>
                   </div>
                 </div>
-                <div class="col-12 col-sm-6 col-lg-12">
-                  <div class="opening-hours">
-                    <h6>opening hours</h6>
-                    <ul class="list-unstyled">
-                      <li> <span>Monday-friday</span><span>10:00 - 18:00</span></li>
-                      <li> <span>saturday</span><span>10:00 - 14:00</span></li>
-                      <li> <span>sunday</span><span>closed</span></li>
-                    </ul>
-                  </div>
-                </div>
+
               </div>
             </div>
             <div class="col-12 col-lg-8">

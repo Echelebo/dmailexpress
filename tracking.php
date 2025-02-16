@@ -28,8 +28,7 @@
 			<div class="container">
 				<section class="track-num">
 					<h2 for="track">Please insert your tracking number</h2>
-					<br />
-					<br />
+
 				</section>
 			  <ul class="nav nav-tabs">
 				<li class="active"><a href="#home">CONSULT LOCAL SHIPPING</a></li>
