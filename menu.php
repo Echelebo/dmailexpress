@@ -42,7 +42,7 @@
           <p> <span>Need Help : </span>providing Innovative and Sustainable Solutions.</p>
         </div>
         <nav class="navbar navbar-expand-lg navbar-light navbar-sticky" id="primary-menu">
-          <div class="container"><a class="navbar-brand" href="/"><img class="logo logo-light" src="assets/images/logo/logo-light.png" alt="Elexpress Freight Logo"/><img class="logo logo-dark" src="assets/images/logo/logo-dark.png" alt="Elexpress Freight Logo"/></a>
+          <div class="container"><a class="navbar-brand" href="/"><img class="logo logo-light" src="assets/images/logo/logo-light.png" alt="Elexpress Freight Logo"/><img class="logo-s logo-dark" style="height: 50px;" src="assets/images/logo/logo-dark.png" alt="Elexpress Freight Logo"/></a>
             <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <!--  Collect the nav links, forms, and other content for toggling  -->
             <div class="collapse navbar-collapse" id="navbarContent">
@@ -120,7 +120,7 @@
                 </div>
                 <!--  End .module-search-->
                 <!-- Start .module-contact-->
-                <div class="module-contact"><a class="btn btn--primary" href="tracking.php">Track & Trace</a></div>
+                <div class="module-contact-x"><a class="btn btn--primary" href="tracking.php">Track & Trace</a></div>
                 <!-- Start .module-language-->
 
               </div>

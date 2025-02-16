@@ -76,8 +76,8 @@
                 <div class="widget-content">
                   <p>If you have any questions or need help, feel free to contact with our team.</p>
                   <ul>
-                    <li class="phone"><a href="tel:+01061245741"><i class="fas fa-phone-alt"></i> 01061245741</a></li>
-                    <li class="address"><a href="javascript:void(0)">2307 Beverley Rd Brooklyn, New York 11226 United States.</a></li>
+                    <li class="phone"><a href="tel:+905488223973"><i class="fas fa-phone-alt"></i>+905488223973</a></li>
+                    <li class="address"><a href="javascript:void(0)">Selahattin Eyyubi Mah. 1538 Sok. No:41, Istanbul, Turkey.</a></li>
                   </ul>
                 </div>
               </div>

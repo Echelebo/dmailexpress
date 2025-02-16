@@ -86,7 +86,7 @@
               <div class="data">
                 <div class="data-icon"><i class="flaticon-034-call-center"></i></div>
                 <div class="data-body">
-                 If you have any questions or need help, feel free to contact with our team.
+                Chat with us live! Our customer service is always online to serve you better.
                 </div>
               </div>
             </div>
@@ -94,7 +94,7 @@
               <div class="data">
                 <div class="data-icon"><i class="flaticon-036-address-book"></i></div>
                 <div class="data-body">
-                  <h6>our location</h6><a href="javascript:void(0)">2307 Beverley Rd Brooklyn, New York 11226 United States.</a>
+                  <h6>our location</h6><a href="javascript:void(0)">Selahattin Eyyubi Mah. 1538 Sok. No:41, Istanbul, Turkey</a>
                 </div>
               </div>
             </div>
