@@ -327,7 +327,7 @@
                     <div class="row">
                       <div class="col-12 col-lg-8">
 
-                        <form class="contactForm-x track-form-x mb-0" action="tracking-result.php" id="userForm" method="post">
+                        <form class="contactForm track-form mb-0" action="tracking-result.php" id="userForm" method="post">
 
                           <h5 class="card-heading">tracking number</h5>
                           <div class="row">
