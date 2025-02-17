@@ -84,7 +84,7 @@ extract($data);
 
 
 		<div class="row">
-            <div class="col-md-12 col-sm-12">
+            <div class="">
                 <div style="color: #333333; width: 50%; margin: auto;">
             <h5><strong><?php echo $tracking; ?></strong><br></h5>
                 </div>
