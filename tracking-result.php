@@ -92,7 +92,7 @@ extract($data);
 		<div class="row">
             <div class="col-12">
                 <p style="text-align: center; color: #333333; ">
-            <h5><strong><?php echo $tracking; ?></strong><br></h5>
+            <strong><?php echo $tracking; ?></strong><br>
 </p>
 
 			<div class="col-6">Ship Date <br /><strong><?php echo $pick_date; ?></strong></div>
