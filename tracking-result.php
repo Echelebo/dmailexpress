@@ -85,8 +85,8 @@ extract($data);
 
 		<div class="row">
             <div class="col-md-12 col-sm-12">
-                <div class="center">
-            <h5><strong><?php echo $tracking; ?></strong><br><br></h5>
+                <div style="color: #333333; width: 50%; margin: auto;">
+            <h5><strong><?php echo $tracking; ?></strong><br></h5>
                 </div>
 
 			<div class="col-md-6 col-sm-6">Ship Date <br /><strong><?php echo $pick_date; ?></strong></div>
