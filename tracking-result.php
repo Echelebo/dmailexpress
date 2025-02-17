@@ -77,62 +77,65 @@ extract($data);
 
 
 <div class="container">
-
-
-
-
-
-
-<!-- map end -->
-
-
-
-
-
-		<div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-6">
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
         <div class="text-lg-center">
-        <div class="title-heading">
 
-            <h5><?php echo $tracking; ?></h5>
+            <h5 class="card-heading-x"><?php echo $tracking; ?></h5><br /><br />
 </div>
 
-			<div class="col-6">Ship Date <br /><strong><?php echo $pick_date; ?></strong></div>
-            <div class="col-6">Actual Delivery <br /><strong><?php echo strtoupper($status); ?></strong></div>
-
+			<div class="col-sm-6 col-md-6 col-lg-6 py-2">
+               <div class="text-lg-left">Ship Date <br /><strong><?php echo $pick_date; ?></strong>
+            </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-6 py-2">
+            <div class="text-lg-left"> Actual Delivery <br /><strong><?php echo strtoupper($status); ?></strong>
+            </div>
+            </div>
         </div>
+
+
+        <div class="col-sm-12 col-md-12 col-lg-12 mt-4">
+
+            <div class="text-lg-center">
+
+<h5 class="card-heading-x">Arrived Port</h5><br /><br />
+</div>
+
+			<div class="col-sm-6 col-md-6 col-lg-6 py-2">
+            <div class="text-lg-left"><?php echo strtoupper($s_add); ?></div>
+        </div>
+            <div class="col-sm-6 col-md-6 col-lg-6 py-2">
+            <div class="text-lg-left"><?php echo strtoupper($pick_time); ?></div>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-6 py-2">
+            <div class="text-lg-left"><strong><?php echo $qty; ?> PIECE SHIPMENT</strong></div>
+        </div>
+
+		</div>
+
+        <div class="col-sm-12 col-md-12 col-lg-12 mt-4">
+        <div class="text-lg-center">
+
+<h5 class="card-heading-x">Sender/Receiver Details</h5><br />
+<a href="contact.php" style="color:dodgerblue;">Contact us now for more information on your package.</a><br /><br />
+</div>
+<div class="text-lg-left">
+<span style="margin-right: 20px;">Sender Name:</span><strong><?php echo strtoupper($ship_name); ?></strong><br /><br />
+            <span style="margin-right: 20px;">Receiver Name:</span><strong><?php echo strtoupper($rev_name); ?></strong><br /><br />
+            <span style="margin-right: 20px;">Receiver Address:</span><strong><?php echo strtoupper($r_add); ?></strong><br /><br />
+            <span style="margin-right: 20px;">Package Name:</span><strong><?php echo strtoupper($comments); ?></strong>
+
 		</div>
         </div>
-        <div class="row py-2 mt-4">
-            <h5><center>Arrived Port</center></h5>
-
-
-			<div class="col-md-6 col-sm-6 py-2"><?php echo strtoupper($s_add); ?></div>
-            <div class="col-md-6 col-sm-6 py-2"><?php echo strtoupper($pick_time); ?></div>
-
-
-		</div>
-        <div class="row py-2 mt-4">
-
-			<div class="col-md-6 col-sm-6 py-2"><strong><?php echo $qty; ?> PIECE SHIPMENT</strong></div>
-
-		</div>
-        <div class="row col-md-12 col-sm-12 py-2 mt-4">
-            <h5><center>Sender/Receiver Details</center></h5><br />
-            <span><center><a href="contact.php">Contact us now for more information on your package.</a></center></span>
-
-
-			<p><span style="margin-right: 20px;">Sender Name:</span><strong><?php echo strtoupper($ship_name); ?></strong></p>
-            <p><span style="margin-right: 20px;">Receiver Name:</span><strong><?php echo strtoupper($rev_name); ?></strong></p>
-            <p><span style="margin-right: 20px;">Receiver Address:</span><strong><?php echo strtoupper($r_add); ?></strong></p>
-            <p><span style="margin-right: 20px;">Package Name:</span><strong><?php echo strtoupper($comments); ?></strong></p>
-
-		</div>
 		<hr />
-		<div class="row">
-			<div class="col-md-12 py-2 mt-2">
 
-				<h2><center>Shipping history</center></h2><br /><br />
+			<div class="col-sm-12 col-md-12 col-lg-12 py-2 mt-4">
+            <div class="text-lg-center">
+
+<h5 class="card-heading-x">Shipping history</h5><br /><br />
+</div>
+
 
 					<?php
 						require_once('dashboard/database.php');
@@ -164,21 +167,27 @@ extract($data);
 						echo '</table>';
 					?>
 			</div>
-		</div>
 
-        <div class="row col-md-12 col-sm-12 py-2 mt-4">
-            <h5><center>Shipment Facts</center></h5><br />
-			<p><span style="margin-right: 20px;">Master Tracking Number:</span><strong><?php echo strtoupper($tracking); ?></strong></p>
-            <p><span style="margin-right: 20px;">Delivered To:</span><strong><?php echo strtoupper($rev_name); ?></strong></p>
-            <p><span style="margin-right: 20px;">Shipper Reference:</span><strong><?php echo strtoupper($invice_no); ?></strong></p>
-            <p><span style="margin-right: 20px;">Expected Delivery Date:</span><strong><?php echo strtoupper($schedule); ?></strong></p>
-            <p><span style="margin-right: 20px;">Service:</span><strong><?php echo strtoupper($mode); ?></strong></p>
 
-            <p><span style="margin-right: 20px;">Total Shipment Weight:</span><strong><?php echo strtoupper($weight); ?></strong></p>
-            <p><span style="margin-right: 20px;">Packaging:</span><strong><?php echo strtoupper($type); ?></strong></p>
+        <div class="col-sm-12 col-md-12 col-lg-12 py-2 mt-4">
+        <div class="text-lg-center">
+
+<h5 class="card-heading-x">Shipment Facts</h5><br /><br />
+</div>
+
+			<span style="margin-right: 20px;">Master Tracking Number:</span><strong><?php echo strtoupper($tracking); ?></strong><br /><br />
+            <span style="margin-right: 20px;">Delivered To:</span><strong><?php echo strtoupper($rev_name); ?></strong><br /><br />
+            <span style="margin-right: 20px;">Shipper Reference:</span><strong><?php echo strtoupper($invice_no); ?></strong><br /><br />
+            <span style="margin-right: 20px;">Expected Delivery Date:</span><strong><?php echo strtoupper($schedule); ?></strong><br /><br />
+            <span style="margin-right: 20px;">Service:</span><strong><?php echo strtoupper($mode); ?></strong><br /><br />
+
+            <span style="margin-right: 20px;">Total Shipment Weight:</span><strong><?php echo strtoupper($weight); ?></strong><br /><br />
+            <span style="margin-right: 20px;">Packaging:</span><strong><?php echo strtoupper($type); ?></strong><br /><br />
 
 		</div>
  <!-- End Deprixa Section -->
+
+        </div>
 
 </div>
 
