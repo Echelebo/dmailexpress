@@ -1,4 +1,4 @@
-<?php
+<div?php
 // *************************************************************************
 // *                                                                       *
 // * DEPRIXA -  Integrated Web system                                      *
@@ -84,12 +84,14 @@ extract($data);
 
 
 		<div class="row">
-            <center><strong><?php echo $tracking; ?></strong></center><br /><br />
-
+            <div class="col-md-12 col-sm-12">
+                <div class="center">
+            <h5><strong><?php echo $tracking; ?></strong><br><br></h5>
+                </div>
 
 			<div class="col-md-6 col-sm-6">Ship Date <br /><strong><?php echo $pick_date; ?></strong></div>
             <div class="col-md-6 col-sm-6">Actual Delivery <br /><strong><?php echo strtoupper($status); ?></strong></div>
-
+</div>
 
 		</div>
         <div class="row py-2 mt-4">
