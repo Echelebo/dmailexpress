@@ -44,30 +44,36 @@ extract($data);
     <!-- /Menu -->
 
 
-    <!-- breadcrumb start -->
-    <div class="breadcrumb-area bg-overlay-2" style="background-image:url('assets/img/banner/breadcrumb.png')">
+    <!-- Start #page-title-->
+    <section class="page-title bg-overlay bg-overlay-dark bg-parallax" id="page-title">
+        <div class="bg-section"><img src="assets/images/page-titles/7.jpg" alt="Background"/></div>
         <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="breadcrumb-inner">
-                        <div class="section-title mb-0">
-                            <h2 class="page-title">Tracking Result</h2>
-                            <ul class="page-list">
-                                <li><a href="/">Home</a></li>
-                                <li>Tracking Result</li>
-                            </ul>
-                        </div>
-                    </div>
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-6">
+              <div class="title text-lg-left">
+                <div class="title-heading">
+                  <h1>track &amp; trace</h1>
                 </div>
+                <div class="clearfix"></div>
+                <ol class="breadcrumb justify-content-lg-start">
+                  <li class="breadcrumb-item"><a href="/">Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Tracking Result</li>
+                </ol>
+              </div>
+              <!-- End .title -->
             </div>
+            <!-- End .col-lg-8 -->
+          </div>
+          <!-- End .row-->
         </div>
-    </div>
-    <!-- breadcrumb end -->
+        <!-- End .container-->
+      </section>
+      <!-- End #page-title-->
 
 
 
 
-<main class="slide mb-4">
+<section class="mb-4">
 
 
 <div class="container">
@@ -84,7 +90,7 @@ extract($data);
 
 
 		<div class="row">
-            <div class="">
+            <div class="col-md-12 col-sm-12">
                 <div style="color: #333333; width: 50%; margin: auto;">
             <h5><strong><?php echo $tracking; ?></strong><br></h5>
                 </div>
@@ -173,7 +179,7 @@ extract($data);
 
 </div>
 
- </main>
+</section>
 
    <!-- Footer -->
 
