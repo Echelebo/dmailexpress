@@ -84,11 +84,11 @@ extract($data);
 
 
 		<div class="row">
-            <h5><center><strong><?php echo $tracking; ?></strong></center></h5>
+            <center><strong><?php echo $tracking; ?></strong></center><br /><br />
 
 
-			<div class="col-md-6 col-sm-6 py-2">Ship Date <br /><strong><?php echo $pick_date; ?></strong></div>
-            <div class="col-md-6 col-sm-6 py-2">Actual Delivery <br /><strong><?php echo strtoupper($status); ?></strong></div>
+			<div class="col-md-6 col-sm-6">Ship Date <br /><strong><?php echo $pick_date; ?></strong></div>
+            <div class="col-md-6 col-sm-6">Actual Delivery <br /><strong><?php echo strtoupper($status); ?></strong></div>
 
 
 		</div>
