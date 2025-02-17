@@ -520,7 +520,7 @@
           <div class="col-12 col-lg-6">
             <div class="video video-1" id="video1">
               <div class="bg-section"><img src="assets/images/video/4.jpg" alt="background"/></div>
-              <div class="player"><a class="popup-video" href="javascript:void(0)"> </a></div>
+              <div class="player"></div>
             </div>
           </div>
         </div>
