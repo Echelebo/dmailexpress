@@ -23,20 +23,7 @@
 
   </head>
   <body>
-    <div class="preloader">
-      <div class="loader-spinner">
-        <div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-      </div>
-    </div>
+
     <!-- Document Wrapper-->
     <div class="wrapper clearfix" id="wrapperParallax">
       <!-- Start .header-1-->
