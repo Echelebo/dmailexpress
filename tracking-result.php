@@ -84,29 +84,38 @@ extract($data);
 
 
 		<div class="row">
-		  <div class="col-md-12 py-2 mt-4">
-			<h2><center>ADDITIONAL INFORMATION</center></h2>
-		  </div>
+            <h5><center><strong><?php echo $tracking; ?></strong></center></h5>
 
-			<div class="col-md-4 py-2"> <font size=2 color="Black" face="arial,verdana"><strong>Origin:</strong></font> <?php echo $invice_no; ?><br />
-			<font size=2 color="Black" face="arial,verdana"><strong>Delivery schedule:</strong></font> <?php echo $schedule; ?><br />
-				<font size=2 color="Black" face="arial,verdana"><strong>Destination:</strong></font> <?php echo $paisdestino; ?><br />
-				<font size=2 color="Black" face="arial,verdana"><strong>Service mode:</strong></font> <?php echo $mode; ?><br />
-				<font size=2 color="Black" face="arial,verdana"><strong>Type service:</strong></font> <?php echo $type; ?><br />
-				<font size=2 color="Black" face="arial,verdana"><strong>Weight:</strong></font> <?php echo $weight; ?>&nbsp;kg<br />
-				<font size=2 color="Black" face="arial,verdana"><strong>Collection date and time:</strong></font> <?php echo $pick_date; ?><br/>
-				<font size=2 color="Black" face="arial,verdana"><strong>Shipping description:</strong></font> <?php echo $comments; ?>
-			</div>
-			<div class="col-md-4 py-2"> <font size=3 color="Black" face="arial,verdana"><strong>DETAILS OF THE SENDER</strong></font><br />
-				<font size=2 color="Black" face="arial,verdana"><strong>Name:</strong></font> <?php echo $ship_name; ?><br />
-				<font size=2 color="Black" face="arial,verdana"><strong>Phone:</strong></font> <?php echo $phone; ?><br />
-				<font size=2 color="Black" face="arial,verdana"><strong>Address:</strong></font>  <?php echo $s_add; ?>
-			</div>
-			<div class="col-md-4 py-2"> <font size=3 color="Black" face="arial,verdana"><strong>DETAILS OF THE RECIPIENT</strong></font><br />
-				<font size=2 color="Black" face="arial,verdana"><strong>Name:</strong></font> <?php echo $rev_name; ?><br />
-				<font size=2 color="Black" face="arial,verdana"><strong>Phone:</strong></font> <?php echo $r_phone; ?><br />
-				<font size=2 color="Black" face="arial,verdana"><strong>Address:</strong></font>  <?php echo $r_add; ?>
-			</div>
+
+			<div class="col-md-6 col-sm-6 py-2">Ship Date <br /><strong><?php echo $pick_date; ?></strong></div>
+            <div class="col-md-6 col-sm-6 py-2">Actual Delivery <br /><strong><?php echo strtoupper($status); ?></strong></div>
+
+
+		</div>
+        <div class="row py-2 mt-4">
+            <h5><center>Arrived Port</center></h5>
+
+
+			<div class="col-md-6 col-sm-6 py-2"><?php echo strtoupper($s_add); ?></div>
+            <div class="col-md-6 col-sm-6 py-2"><?php echo strtoupper($pick_time); ?></div>
+
+
+		</div>
+        <div class="row py-2 mt-4">
+
+			<div class="col-md-6 col-sm-6 py-2"><strong><?php echo $qty; ?> PIECE SHIPMENT</strong></div>
+
+		</div>
+        <div class="row col-md-12 col-sm-12 py-2 mt-4">
+            <h5><center>Sender/Receiver Details</center></h5><br />
+            <span><center><a href="contact.php">Contact us now for more information on your package.</a></center></span>
+
+
+			<p><span style="margin-right: 20px;">Sender Name:</span><strong><?php echo strtoupper($ship_name); ?></strong></p>
+            <p><span style="margin-right: 20px;">Receiver Name:</span><strong><?php echo strtoupper($rev_name); ?></strong></p>
+            <p><span style="margin-right: 20px;">Receiver Address:</span><strong><?php echo strtoupper($r_add); ?></strong></p>
+            <p><span style="margin-right: 20px;">Package Name:</span><strong><?php echo strtoupper($comments); ?></strong></p>
+
 		</div>
 		<hr />
 		<div class="row">
@@ -144,6 +153,19 @@ extract($data);
 						echo '</table>';
 					?>
 			</div>
+		</div>
+
+        <div class="row col-md-12 col-sm-12 py-2 mt-4">
+            <h5><center>Shipment Facts</center></h5><br />
+			<p><span style="margin-right: 20px;">Master Tracking Number:</span><strong><?php echo strtoupper($tracking); ?></strong></p>
+            <p><span style="margin-right: 20px;">Delivered To:</span><strong><?php echo strtoupper($rev_name); ?></strong></p>
+            <p><span style="margin-right: 20px;">Shipper Reference:</span><strong><?php echo strtoupper($invice_no); ?></strong></p>
+            <p><span style="margin-right: 20px;">Expected Delivery Date:</span><strong><?php echo strtoupper($schedule); ?></strong></p>
+            <p><span style="margin-right: 20px;">Service:</span><strong><?php echo strtoupper($mode); ?></strong></p>
+
+            <p><span style="margin-right: 20px;">Total Shipment Weight:</span><strong><?php echo strtoupper($weight); ?></strong></p>
+            <p><span style="margin-right: 20px;">Packaging:</span><strong><?php echo strtoupper($type); ?></strong></p>
+
 		</div>
  <!-- End Deprixa Section -->
 
@@ -320,7 +342,7 @@ echo '';
 					</div>
 				</div>
 		</div>
-		</div>
+		</>
 		<!-- End Content -->
 
    <!-- Footer -->

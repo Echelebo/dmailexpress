@@ -5,9 +5,9 @@
 <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="author" content="Ayman Fikry"/>
+    <meta name="author" content="Elexpress Freight"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-    <meta name="description" content="Multi-purpose Business html5 template"/>
+    <meta name="description" content="Elexpress Freight Logistics Cargo"/>
     <title>Home Classic - Elexpress Freight Logistics Cargo</title>
     <link href="assets/images/favicon/favicon.png" rel="icon"/>
     <!--  Fonts ==
