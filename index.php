@@ -332,11 +332,11 @@
                           <h5 class="card-heading">tracking number</h5>
                           <div class="row">
                             <div class="col-12">
-                              <textarea class="form-control" name="shipping" id="shipping" cols="30" rows="2" placeholder="Type/past tracking number." required=""></textarea>
+                              <input type="text" class="form-control" name="shipping" id="shipping" placeholder="Type/past tracking number." required>
                             </div>
 
                             <div class="col-12">
-                              <input class="btn btn--secondary btn--block" type="submit" value="Track &amp; Trace"/>
+                              <button class="btn btn--secondary" type="submit">Track & Trace </button>
                             </div>
                           </div>
                         </form>
