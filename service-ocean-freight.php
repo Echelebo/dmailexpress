@@ -89,7 +89,7 @@
                     <h5>overview</h5>
                     <p>At Elexpress Freight, we provide reliable and cost-effective ocean freight solutions to help businesses transport goods across the globe. Whether you need full container loads (FCL) or less than container loads (LCL), our extensive network and expertise ensure smooth and efficient shipping.</p>
 
-<h3>Why Choose Elexpress Freight for Ocean Freight?</h3>
+<h5>Why Choose Elexpress Freight for Ocean Freight?</h5>
 <ul>
 	<li>•	Global Coverage: We partner with major shipping lines to offer worldwide transportation.</li>
 	<li>•	Flexible Shipping Options: Choose between FCL for large shipments or LCL for cost-effective smaller loads.</li>

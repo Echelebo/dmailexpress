@@ -163,7 +163,7 @@
                         <li> <a><i class="fas fa-check-circle"></i><span>highly professional staff</span></a></li>
                       </ul>
                     </div>
-                    <div class="service-more"><a class="btn" href="javascript:void(0)"> <i class="icon-arrow-right"></i><span>read more</span></a></div>
+                    <div class="service-more"><a class="btn" href="service-air-freight.php"> <i class="icon-arrow-right"></i><span>read more</span></a></div>
                   </div>
                   <!-- End .work-content -->
                 </div>
@@ -189,7 +189,7 @@
                         <li> <a><i class="fas fa-check-circle"></i><span>professional &amp; qualified</span></a></li>
                       </ul>
                     </div>
-                    <div class="service-more"><a class="btn" href="javascript:void(0)"> <i class="icon-arrow-right"></i><span>read more</span></a></div>
+                    <div class="service-more"><a class="btn" href="service-ocean-freight.php"> <i class="icon-arrow-right"></i><span>read more</span></a></div>
                   </div>
                   <!-- End .work-content -->
                 </div>
@@ -215,7 +215,7 @@
                         <li> <a><i class="fas fa-check-circle"></i><span>logistical expertise</span></a></li>
                       </ul>
                     </div>
-                    <div class="service-more"><a class="btn" href="javascript:void(0)"> <i class="icon-arrow-right"></i><span>read more</span></a></div>
+                    <div class="service-more"><a class="btn" href="service-road-freight.php"> <i class="icon-arrow-right"></i><span>read more</span></a></div>
                   </div>
                   <!-- End .work-content -->
                 </div>

@@ -89,7 +89,7 @@
                     <h5>overview</h5>
                     <p>At Elexpress Freight, we provide specialized logistics solutions for the sciences and healthcare industries, ensuring the safe and timely transportation of medical supplies, pharmaceuticals, lab equipment, and other critical healthcare products. With temperature-controlled shipping, secure handling, and strict compliance with industry regulations, we guarantee the highest standards in medical logistics.</p>
 
-<h3>Why Choose Elexpress Freight for Healthcare & Sciences Shipping?</h3>
+<h5>Why Choose Elexpress Freight for Healthcare & Sciences Shipping?</h5>
 <ul>
 	<li>•	Temperature-Controlled Transport: Secure cold chain solutions for pharmaceuticals, vaccines, and biologics.</li>
 	<li>•	Regulatory Compliance: Adherence to healthcare and pharmaceutical shipping regulations, including GDP and GMP standards.</li>

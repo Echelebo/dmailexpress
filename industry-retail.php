@@ -89,7 +89,7 @@
                     <h5>overview</h5>
                     <p>We understand the fast-paced nature of the retail and consumer goods industry. Our specialized shipping solutions ensure your products reach shelves and customers on time, every time. Whether you need warehousing, inventory management, or last-mile delivery, we offer end-to-end logistics tailored to your business needs.</p>
 
-<h3>Why Choose Elexpress Freight for Retail & Consumer Shipping?</h3>
+<h5>Why Choose Elexpress Freight for Retail & Consumer Shipping?</h5>
 <ul>
 	<li>•	Fast & Reliable Delivery: Timely shipping to keep up with consumer demand and market trends.</li>
 	<li>•	Flexible Shipping Options: From bulk shipments to direct-to-consumer deliveries, we offer scalable solutions.</li>

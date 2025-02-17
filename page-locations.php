@@ -217,56 +217,7 @@
       Google Maps Section
       ============================
       -->
-      <section class="map map-3" id="map-1">
-        <iframe class="map-gray map-gray" src="https://maps.google.com/maps?q=Pioneer%20Works&amp;t=m&amp;z=13&amp;output=embed&amp;iwloc=near" width="600" height="450" style="border:0"> </iframe>
-        <div class="container">
-          <div class="row">
-            <div class="col-12 col-lg-4">
-              <div class="accordion accordion-4" id="accordion01">
-                <h4 class="panel">global locations</h4>
-                <div class="card">
-                  <div class="card-heading"><a class="card-link collapsed" data-toggle="collapse" data-parent="#accordion01" href="#collapse01-1">london office</a></div>
-                  <div class="collapse show" id="collapse01-1" data-parent="#accordion01">
-                    <div class="card-body">
-                      <ul class="list-unstyled info">
-                        <li><span class="fas fa-map-marker-alt"></span><a href="javascript:void(0)">New York 11226 United States.</a></li>
-                        <li><span class="fas fa-envelope"></span><a href="mailto::contact@elexpressfreight.com">contact@elexpressfreight.com</a></li>
-                        <li><span class="fas fa-phone-alt"></span><a href="tel:01061245741">(002) 01061245741</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="card-heading"><a class="card-link collapsed" data-toggle="collapse" data-parent="#accordion01" href="#collapse01-2">berlin office</a></div>
-                  <div class="collapse" id="collapse01-2" data-parent="#accordion01">
-                    <div class="card-body">
-                      <ul class="list-unstyled info">
-                        <li><span class="fas fa-map-marker-alt"></span><a href="javascript:void(0)">New York 11226 United States.</a></li>
-                        <li><span class="fas fa-envelope"></span><a href="mailto::contact@elexpressfreight.com">contact@elexpressfreight.com</a></li>
-                        <li><span class="fas fa-phone-alt"></span><a href="tel:01061245741">(002) 01061245741</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="card-heading"><a class="card-link collapsed" data-toggle="collapse" data-parent="#accordion01" href="#collapse01-3">manchester office</a></div>
-                  <div class="collapse" id="collapse01-3" data-parent="#accordion01">
-                    <div class="card-body">
-                      <ul class="list-unstyled info">
-                        <li><span class="fas fa-map-marker-alt"></span><a href="javascript:void(0)">New York 11226 United States.</a></li>
-                        <li><span class="fas fa-envelope"></span><a href="mailto::contact@elexpressfreight.com">contact@elexpressfreight.com</a></li>
-                        <li><span class="fas fa-phone-alt"></span><a href="tel:01061245741">(002) 01061245741</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- End .row-->
-        </div>
-        <!-- End .container-->
-      </section>
+
       <!--
       ============================
       Footer #1

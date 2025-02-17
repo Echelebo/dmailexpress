@@ -89,7 +89,7 @@
                     <h5>overview</h5>
                     <p>At Elexpress Freight, we offer reliable and efficient warehousing solutions to streamline your supply chain. Our facilities are designed to provide secure storage, real-time inventory management, and seamless distribution, ensuring your goods are handled with the utmost care. </p>
 
-<h3>Why Choose Elexpress Freight for Warehousing?</h3>
+<h5>Why Choose Elexpress Freight for Warehousing?</h5>
 <ul>
 	<li>•	Secure Storage: Our state-of-the-art warehouses are equipped with advanced security systems to protect your inventory.</li>
 	<li>•	Inventory Management: Real-time tracking and monitoring to ensure accurate stock levels and efficient order fulfillment.</li>
