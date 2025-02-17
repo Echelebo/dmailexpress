@@ -73,7 +73,7 @@ extract($data);
 
 
 
-<section class="mb-4">
+<section class="mt-4">
 
 
 <div class="container">
@@ -90,16 +90,19 @@ extract($data);
 
 
 		<div class="row">
-            <div class="col-12">
-                <p style="text-align: center; color: #333333; ">
-            <strong><?php echo $tracking; ?></strong><br>
-</p>
+        <div class="col-sm-12 col-md-12 col-lg-6">
+        <div class="text-lg-center">
+        <div class="title-heading">
+
+            <h5><?php echo $tracking; ?></h5>
+</div>
 
 			<div class="col-6">Ship Date <br /><strong><?php echo $pick_date; ?></strong></div>
             <div class="col-6">Actual Delivery <br /><strong><?php echo strtoupper($status); ?></strong></div>
-</div>
 
+        </div>
 		</div>
+        </div>
         <div class="row py-2 mt-4">
             <h5><center>Arrived Port</center></h5>
 
