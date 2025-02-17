@@ -84,11 +84,11 @@ extract($data);
             <h5 class="card-heading-x"><?php echo $tracking; ?></h5><br />
 </div>
 
-			<div class="col-sm-6 col-md-6 col-lg-6 py-2">
+			<div class="col-sm-6 col-md-6 col-lg-6">
                <div class="text-left">Ship Date <br /><strong><?php echo $pick_date; ?></strong>
             </div>
             </div>
-            <div class="col-sm-6 col-md-6 col-lg-6 py-2">
+            <div class="col-sm-6 col-md-6 col-lg-6">
             <div class="text-left"> Actual Delivery <br /><strong><?php echo strtoupper($status); ?></strong>
             </div>
             </div>
@@ -102,13 +102,13 @@ extract($data);
 <h5 class="card-heading-x">Arrived Port</h5><br />
 </div>
 
-			<div class="col-sm-6 col-md-6 col-lg-6 py-2">
+			<div class="col-sm-6 col-md-6 col-lg-6">
             <div class="text-left"><?php echo strtoupper($s_add); ?></div>
         </div>
-            <div class="col-sm-6 col-md-6 col-lg-6 py-2">
+            <div class="col-sm-6 col-md-6 col-lg-6">
             <div class="text-left"><?php echo strtoupper($pick_time); ?></div>
         </div>
-        <div class="col-sm-6 col-md-6 col-lg-6 py-2">
+        <div class="col-sm-6 col-md-6 col-lg-6">
             <div class="text-left"><strong><?php echo $qty; ?> PIECE SHIPMENT</strong></div>
         </div>
 
@@ -130,10 +130,10 @@ extract($data);
         </div>
 		<hr />
 
-			<div class="col-sm-12 col-md-12 col-lg-12 py-2 mt-4">
+			<div class="col-sm-12 col-md-12 col-lg-12 mt-4">
             <div class="text-center">
 
-<h5 class="card-heading-x">Shipping history</h5><br />
+<h5 class="card-heading-x">Shipping History</h5><br />
 </div>
 
 
@@ -169,7 +169,7 @@ extract($data);
 			</div>
 
 
-        <div class="col-sm-12 col-md-12 col-lg-12 py-2 mt-4">
+        <div class="col-sm-12 col-md-12 col-lg-12 mt-4">
         <div class="text-center">
 
 <h5 class="card-heading-x">Shipment Facts</h5><br />
