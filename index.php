@@ -329,14 +329,14 @@
 
                         <form class="contactForm-x track-form mb-0" action="tracking-result.php" id="userForm" method="post">
 
-                          <h5 class="card-heading">tracking number</h5>
+                          <h5 class="card-heading">Tracking Number</h5>
                           <div class="row">
                             <div class="col-12">
-                              <input type="text" class="form-control" name="shipping" id="shipping" placeholder="Type/past tracking number." required>
+                              <textarea class="form-control" name="shipping" id="shipping" cols="30" rows="2" placeholder="Type/past tracking number." required=""></textarea>
                             </div>
 
                             <div class="col-12">
-                              <button class="btn btn--secondary" type="submit">Track & Trace </button>
+                              <input class="btn btn--secondary btn--block" type="submit" value="Track &amp; Trace"/>
                             </div>
                           </div>
                         </form>

@@ -230,9 +230,9 @@
                     <div class="row">
                       <div class="col-12 col-lg-8">
 
-                        <form class="contactForm track-form mb-0" action="tracking-result.php" id="userForm" method="post">
+                        <form class="contactForm-x track-form mb-0" action="tracking-result.php" id="userForm" method="post">
 
-                          <h5 class="card-heading">tracking number</h5>
+                          <h5 class="card-heading">Tracking Number</h5>
                           <div class="row">
                             <div class="col-12">
                               <textarea class="form-control" name="shipping" id="shipping" cols="30" rows="2" placeholder="Type/past tracking number." required=""></textarea>
