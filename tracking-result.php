@@ -76,20 +76,20 @@ extract($data);
 <section class="mt-4">
 
 
-<div class="container">
+<div class="container" style="color: #333333;">
     <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-12">
-        <div class="text-lg-center">
+        <div class="text-center">
 
-            <h5 class="card-heading-x"><?php echo $tracking; ?></h5><br /><br />
+            <h5 class="card-heading-x"><?php echo $tracking; ?></h5><br />
 </div>
 
 			<div class="col-sm-6 col-md-6 col-lg-6 py-2">
-               <div class="text-lg-left">Ship Date <br /><strong><?php echo $pick_date; ?></strong>
+               <div class="text-left">Ship Date <br /><strong><?php echo $pick_date; ?></strong>
             </div>
             </div>
             <div class="col-sm-6 col-md-6 col-lg-6 py-2">
-            <div class="text-lg-left"> Actual Delivery <br /><strong><?php echo strtoupper($status); ?></strong>
+            <div class="text-left"> Actual Delivery <br /><strong><?php echo strtoupper($status); ?></strong>
             </div>
             </div>
         </div>
@@ -97,30 +97,30 @@ extract($data);
 
         <div class="col-sm-12 col-md-12 col-lg-12 mt-4">
 
-            <div class="text-lg-center">
+            <div class="text-center">
 
-<h5 class="card-heading-x">Arrived Port</h5><br /><br />
+<h5 class="card-heading-x">Arrived Port</h5><br />
 </div>
 
 			<div class="col-sm-6 col-md-6 col-lg-6 py-2">
-            <div class="text-lg-left"><?php echo strtoupper($s_add); ?></div>
+            <div class="text-left"><?php echo strtoupper($s_add); ?></div>
         </div>
             <div class="col-sm-6 col-md-6 col-lg-6 py-2">
-            <div class="text-lg-left"><?php echo strtoupper($pick_time); ?></div>
+            <div class="text-left"><?php echo strtoupper($pick_time); ?></div>
         </div>
         <div class="col-sm-6 col-md-6 col-lg-6 py-2">
-            <div class="text-lg-left"><strong><?php echo $qty; ?> PIECE SHIPMENT</strong></div>
+            <div class="text-left"><strong><?php echo $qty; ?> PIECE SHIPMENT</strong></div>
         </div>
 
 		</div>
 
         <div class="col-sm-12 col-md-12 col-lg-12 mt-4">
-        <div class="text-lg-center">
+        <div class="text-center">
 
-<h5 class="card-heading-x">Sender/Receiver Details</h5><br />
-<a href="contact.php" style="color:dodgerblue;">Contact us now for more information on your package.</a><br /><br />
+<h5 class="card-heading-x">Sender/Receiver Details</h5>
+<a href="contact.php" style="color:dodgerblue;">Contact us now for more information on your package.</a><br />
 </div>
-<div class="text-lg-left">
+<div class="text-left">
 <span style="margin-right: 20px;">Sender Name:</span><strong><?php echo strtoupper($ship_name); ?></strong><br /><br />
             <span style="margin-right: 20px;">Receiver Name:</span><strong><?php echo strtoupper($rev_name); ?></strong><br /><br />
             <span style="margin-right: 20px;">Receiver Address:</span><strong><?php echo strtoupper($r_add); ?></strong><br /><br />
@@ -131,9 +131,9 @@ extract($data);
 		<hr />
 
 			<div class="col-sm-12 col-md-12 col-lg-12 py-2 mt-4">
-            <div class="text-lg-center">
+            <div class="text-center">
 
-<h5 class="card-heading-x">Shipping history</h5><br /><br />
+<h5 class="card-heading-x">Shipping history</h5><br />
 </div>
 
 
@@ -170,9 +170,9 @@ extract($data);
 
 
         <div class="col-sm-12 col-md-12 col-lg-12 py-2 mt-4">
-        <div class="text-lg-center">
+        <div class="text-center">
 
-<h5 class="card-heading-x">Shipment Facts</h5><br /><br />
+<h5 class="card-heading-x">Shipment Facts</h5><br />
 </div>
 
 			<span style="margin-right: 20px;">Master Tracking Number:</span><strong><?php echo strtoupper($tracking); ?></strong><br /><br />
@@ -181,7 +181,7 @@ extract($data);
             <span style="margin-right: 20px;">Expected Delivery Date:</span><strong><?php echo strtoupper($schedule); ?></strong><br /><br />
             <span style="margin-right: 20px;">Service:</span><strong><?php echo strtoupper($mode); ?></strong><br /><br />
 
-            <span style="margin-right: 20px;">Total Shipment Weight:</span><strong><?php echo strtoupper($weight); ?></strong><br /><br />
+            <span style="margin-right: 20px;">Total Shipment Weight:</span><strong><?php echo strtoupper($weight); ?>KG</strong><br /><br />
             <span style="margin-right: 20px;">Packaging:</span><strong><?php echo strtoupper($type); ?></strong><br /><br />
 
 		</div>
