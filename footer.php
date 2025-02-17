@@ -13,7 +13,7 @@
               <div class="col-12 col-lg-9 col-xl-8">
                 <div class="widget-newsletter">
                   <div class="widget-content">
-                    <p>Sign up for industry alerts,<br/>insights from Equita.</p>
+                    <p>Sign up for industry alerts,<br/>insights from Elexpress Freight.</p>
                     <form class="form-newsletter mailchimp">
                       <input class="form-control" type="email" name="email" placeholder="Your Email Address"/>
                       <input class="btn btn--primary" type="submit" value="sign up!"/>
@@ -107,5 +107,5 @@
     <script src="assets/js/functions.js"></script>
   </body>
 
-<!-- Mirrored from demo.zytheme.com/equita/home-classic.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 15 Feb 2025 14:54:20 GMT -->
+<!-- Mirrored from demo.zytheme.com/Elexpress Freight/home-classic.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 15 Feb 2025 14:54:20 GMT -->
 </html>

@@ -11,7 +11,7 @@
                 </div>
                 <div class="clearfix"></div>
                 <ol class="breadcrumb justify-content-center">
-                  <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+                  <li class="breadcrumb-item"><a href="/">Home</a></li>
                   <li class="breadcrumb-item"><a href="#">industries</a></li>
                   <li class="breadcrumb-item active" aria-current="page">Retail &amp; Consumer</li>
                 </ol>
@@ -87,7 +87,17 @@
                 <div class="entry-content">
                   <div class="entry-bio">
                     <h5>overview</h5>
-                    <p>Our airfreight staff attaches great importance to customizing the booking process for our customers. That’s why we strive to find the air freight solution that best suits your needs. We’ll ask you when the freight is available, what the required delivery date is, and if there’s potential to save on time or cost. Your answers to these and other questions help us decide if you should book the air freight as direct. We'll also see if our sea-air service is a better solution for you.</p>
+                    <p>We understand the fast-paced nature of the retail and consumer goods industry. Our specialized shipping solutions ensure your products reach shelves and customers on time, every time. Whether you need warehousing, inventory management, or last-mile delivery, we offer end-to-end logistics tailored to your business needs.</p>
+
+<h3>Why Choose Elexpress Freight for Retail & Consumer Shipping?</h3>
+<ul>
+	<li>•	Fast & Reliable Delivery: Timely shipping to keep up with consumer demand and market trends.</li>
+	<li>•	Flexible Shipping Options: From bulk shipments to direct-to-consumer deliveries, we offer scalable solutions.</li>
+	<li>•	Inventory & Warehousing Solutions: Efficient storage and management to optimize your supply chain.</li>
+	<li>•	Seamless Distribution: Nationwide and international shipping with streamlined logistics.</li>
+	<li>•	Real-Time Tracking: Stay informed with live updates on your shipments.</li>
+</ul>
+<p>Whether you’re shipping to retail stores, warehouses, or directly to customers, Elexpress Freight ensures efficient and cost-effective logistics. Contact us today to learn how we can support your retail supply chain!</p>
                   </div>
                   <div class="video video-2 bg-overlay bg-overlay-dark" id="video1">
                     <div class="bg-section"><img src="assets/images/video/3.jpg" alt="background"/></div>
@@ -363,119 +373,7 @@
         </div>
         <!-- End .container-->
       </section>
-      <!--
-      ============================
-      Testimonials #2 Section
-      ============================
-      -->
-      <section class="testimonial testimonial-1 testimonial-2 bg-gray">
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <div class="carousel owl-carousel carousel-dots" data-slide="2" data-slide-rs="1" data-autoplay="false" data-nav="false" data-dots="false" data-space="40" data-loop="true" data-speed="800">
-                <div class="testimonial-panel">
-                  <div class="testimonial-panel-warp">
-                    <div class="testimonial-icon"><i class="icon-Quote-Icon"></i></div>
-                    <div class="testimonial-body">
-                      <div class="testimonial-img"><img src="assets/images/testimonial/3.jpg" alt="Testimonial Author"/></div>
-                      <div class="testimonial-content">
-                        <div class="testimonial-rating"><i class="icon-Star-1"></i><i class="icon-Star-1"></i><i class="icon-Star-1"></i><i class="icon-Star-1"></i><i class="icon-Star-1"></i></div>
-                        <p>Elexpress Freight Logistics International customer service is some of the best we have ever had with ocean we like to ship as much as possible with you all.</p>
-                        <div class="testimonial-meta">
-                          <h4>John R Peter</h4>
-                          <p>movein</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="testimonial-panel">
-                  <div class="testimonial-panel-warp">
-                    <div class="testimonial-icon"><i class="icon-Quote-Icon"></i></div>
-                    <div class="testimonial-body">
-                      <div class="testimonial-img"><img src="assets/images/testimonial/4.jpg" alt="Testimonial Author"/></div>
-                      <div class="testimonial-content">
-                        <div class="testimonial-rating"><i class="icon-Star-1"></i><i class="icon-Star-1"></i><i class="icon-Star-1"></i><i class="icon-Star-1"></i><i class="icon-Star-1"></i></div>
-                        <p>Elexpress Freight Logistics International customer service is some of the best we have ever had with ocean we like to ship as much as possible with you all.</p>
-                        <div class="testimonial-meta">
-                          <h4>James Wane</h4>
-                          <p>Aleko Company</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="testimonial-panel">
-                  <div class="testimonial-panel-warp">
-                    <div class="testimonial-icon"><i class="icon-Quote-Icon"></i></div>
-                    <div class="testimonial-body">
-                      <div class="testimonial-img"><img src="assets/images/testimonial/3.jpg" alt="Testimonial Author"/></div>
-                      <div class="testimonial-content">
-                        <div class="testimonial-rating"><i class="icon-Star-1"></i><i class="icon-Star-1"></i><i class="icon-Star-1"></i><i class="icon-Star-1"></i><i class="icon-Star-1"></i></div>
-                        <p>Elexpress Freight Logistics International customer service is some of the best we have ever had with ocean we like to ship as much as possible with you all.</p>
-                        <div class="testimonial-meta">
-                          <h4>Marko Smith</h4>
-                          <p>Aify Agency</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="testimonial-panel">
-                  <div class="testimonial-panel-warp">
-                    <div class="testimonial-icon"><i class="icon-Quote-Icon"></i></div>
-                    <div class="testimonial-body">
-                      <div class="testimonial-img"><img src="assets/images/testimonial/4.jpg" alt="Testimonial Author"/></div>
-                      <div class="testimonial-content">
-                        <div class="testimonial-rating"><i class="icon-Star-1"></i><i class="icon-Star-1"></i><i class="icon-Star-1"></i><i class="icon-Star-1"></i><i class="icon-Star-1"></i></div>
-                        <p>Elexpress Freight Logistics International customer service is some of the best we have ever had with ocean we like to ship as much as possible with you all.</p>
-                        <div class="testimonial-meta">
-                          <h4>Marko Smith</h4>
-                          <p>movein</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="testimonial-panel">
-                  <div class="testimonial-panel-warp">
-                    <div class="testimonial-icon"><i class="icon-Quote-Icon"></i></div>
-                    <div class="testimonial-body">
-                      <div class="testimonial-img"><img src="assets/images/testimonial/3.jpg" alt="Testimonial Author"/></div>
-                      <div class="testimonial-content">
-                        <div class="testimonial-rating"><i class="icon-Star-1"></i><i class="icon-Star-1"></i><i class="icon-Star-1"></i><i class="icon-Star-1"></i><i class="icon-Star-1"></i></div>
-                        <p>Elexpress Freight Logistics International customer service is some of the best we have ever had with ocean we like to ship as much as possible with you all.</p>
-                        <div class="testimonial-meta">
-                          <h4>Marko Smith</h4>
-                          <p>Aleko Company</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="testimonial-panel">
-                  <div class="testimonial-panel-warp">
-                    <div class="testimonial-icon"><i class="icon-Quote-Icon"></i></div>
-                    <div class="testimonial-body">
-                      <div class="testimonial-img"><img src="assets/images/testimonial/4.jpg" alt="Testimonial Author"/></div>
-                      <div class="testimonial-content">
-                        <div class="testimonial-rating"><i class="icon-Star-1"></i><i class="icon-Star-1"></i><i class="icon-Star-1"></i><i class="icon-Star-1"></i><i class="icon-Star-1"></i></div>
-                        <p>Elexpress Freight Logistics International customer service is some of the best we have ever had with ocean we like to ship as much as possible with you all.</p>
-                        <div class="testimonial-meta">
-                          <h4>Marko Smith</h4>
-                          <p>Aify Agency</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- End .row-->
-        </div>
-        <!-- End .container-->
-      </section>
+
       <hr/>
       <!--
       ============================

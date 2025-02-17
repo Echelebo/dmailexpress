@@ -11,7 +11,7 @@
                 </div>
                 <div class="clearfix"></div>
                 <ol class="breadcrumb justify-content-center">
-                  <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+                  <li class="breadcrumb-item"><a href="/">Home</a></li>
                   <li class="breadcrumb-item"><a href="#">industries</a></li>
                   <li class="breadcrumb-item active" aria-current="page">Sciences &amp; Healthcare</li>
                 </ol>
@@ -87,7 +87,17 @@
                 <div class="entry-content">
                   <div class="entry-bio">
                     <h5>overview</h5>
-                    <p>Our airfreight staff attaches great importance to customizing the booking process for our customers. That’s why we strive to find the air freight solution that best suits your needs. We’ll ask you when the freight is available, what the required delivery date is, and if there’s potential to save on time or cost. Your answers to these and other questions help us decide if you should book the air freight as direct. We'll also see if our sea-air service is a better solution for you.</p>
+                    <p>At Elexpress Freight, we provide specialized logistics solutions for the sciences and healthcare industries, ensuring the safe and timely transportation of medical supplies, pharmaceuticals, lab equipment, and other critical healthcare products. With temperature-controlled shipping, secure handling, and strict compliance with industry regulations, we guarantee the highest standards in medical logistics.</p>
+
+<h3>Why Choose Elexpress Freight for Healthcare & Sciences Shipping?</h3>
+<ul>
+	<li>•	Temperature-Controlled Transport: Secure cold chain solutions for pharmaceuticals, vaccines, and biologics.</li>
+	<li>•	Regulatory Compliance: Adherence to healthcare and pharmaceutical shipping regulations, including GDP and GMP standards.</li>
+	<li>•	Fast & Reliable Delivery: Expedited and time-sensitive shipping to ensure critical medical supplies arrive on time.</li>
+	<li>•	Secure Handling: Specialized packaging and handling for fragile and high-value medical equipment.</li>
+	<li>•	End-to-End Tracking: Real-time shipment monitoring for full visibility and peace of mind.</li>
+</ul>
+<p>From hospitals and research labs to pharmaceutical companies and healthcare providers, Elexpress Freight delivers precision, care, and reliability in every shipment. Contact us today to learn more about our tailored logistics solutions for the healthcare industry!</p>
                   </div>
                   <div class="video video-2 bg-overlay bg-overlay-dark" id="video1">
                     <div class="bg-section"><img src="assets/images/video/3.jpg" alt="background"/></div>
@@ -363,119 +373,8 @@
         </div>
         <!-- End .container-->
       </section>
-      <!--
-      ============================
-      Testimonials #2 Section
-      ============================
-      -->
-      <section class="testimonial testimonial-1 testimonial-2 bg-gray">
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <div class="carousel owl-carousel carousel-dots" data-slide="2" data-slide-rs="1" data-autoplay="false" data-nav="false" data-dots="false" data-space="40" data-loop="true" data-speed="800">
-                <div class="testimonial-panel">
-                  <div class="testimonial-panel-warp">
-                    <div class="testimonial-icon"><i class="icon-Quote-Icon"></i></div>
-                    <div class="testimonial-body">
-                      <div class="testimonial-img"><img src="assets/images/testimonial/3.jpg" alt="Testimonial Author"/></div>
-                      <div class="testimonial-content">
-                        <div class="testimonial-rating"><i class="icon-Star-1"></i><i class="icon-Star-1"></i><i class="icon-Star-1"></i><i class="icon-Star-1"></i><i class="icon-Star-1"></i></div>
-                        <p>Elexpress Freight Logistics International customer service is some of the best we have ever had with ocean we like to ship as much as possible with you all.</p>
-                        <div class="testimonial-meta">
-                          <h4>John R Peter</h4>
-                          <p>movein</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="testimonial-panel">
-                  <div class="testimonial-panel-warp">
-                    <div class="testimonial-icon"><i class="icon-Quote-Icon"></i></div>
-                    <div class="testimonial-body">
-                      <div class="testimonial-img"><img src="assets/images/testimonial/4.jpg" alt="Testimonial Author"/></div>
-                      <div class="testimonial-content">
-                        <div class="testimonial-rating"><i class="icon-Star-1"></i><i class="icon-Star-1"></i><i class="icon-Star-1"></i><i class="icon-Star-1"></i><i class="icon-Star-1"></i></div>
-                        <p>Elexpress Freight Logistics International customer service is some of the best we have ever had with ocean we like to ship as much as possible with you all.</p>
-                        <div class="testimonial-meta">
-                          <h4>James Wane</h4>
-                          <p>Aleko Company</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="testimonial-panel">
-                  <div class="testimonial-panel-warp">
-                    <div class="testimonial-icon"><i class="icon-Quote-Icon"></i></div>
-                    <div class="testimonial-body">
-                      <div class="testimonial-img"><img src="assets/images/testimonial/3.jpg" alt="Testimonial Author"/></div>
-                      <div class="testimonial-content">
-                        <div class="testimonial-rating"><i class="icon-Star-1"></i><i class="icon-Star-1"></i><i class="icon-Star-1"></i><i class="icon-Star-1"></i><i class="icon-Star-1"></i></div>
-                        <p>Elexpress Freight Logistics International customer service is some of the best we have ever had with ocean we like to ship as much as possible with you all.</p>
-                        <div class="testimonial-meta">
-                          <h4>Marko Smith</h4>
-                          <p>Aify Agency</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="testimonial-panel">
-                  <div class="testimonial-panel-warp">
-                    <div class="testimonial-icon"><i class="icon-Quote-Icon"></i></div>
-                    <div class="testimonial-body">
-                      <div class="testimonial-img"><img src="assets/images/testimonial/4.jpg" alt="Testimonial Author"/></div>
-                      <div class="testimonial-content">
-                        <div class="testimonial-rating"><i class="icon-Star-1"></i><i class="icon-Star-1"></i><i class="icon-Star-1"></i><i class="icon-Star-1"></i><i class="icon-Star-1"></i></div>
-                        <p>Elexpress Freight Logistics International customer service is some of the best we have ever had with ocean we like to ship as much as possible with you all.</p>
-                        <div class="testimonial-meta">
-                          <h4>Marko Smith</h4>
-                          <p>movein</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="testimonial-panel">
-                  <div class="testimonial-panel-warp">
-                    <div class="testimonial-icon"><i class="icon-Quote-Icon"></i></div>
-                    <div class="testimonial-body">
-                      <div class="testimonial-img"><img src="assets/images/testimonial/3.jpg" alt="Testimonial Author"/></div>
-                      <div class="testimonial-content">
-                        <div class="testimonial-rating"><i class="icon-Star-1"></i><i class="icon-Star-1"></i><i class="icon-Star-1"></i><i class="icon-Star-1"></i><i class="icon-Star-1"></i></div>
-                        <p>Elexpress Freight Logistics International customer service is some of the best we have ever had with ocean we like to ship as much as possible with you all.</p>
-                        <div class="testimonial-meta">
-                          <h4>Marko Smith</h4>
-                          <p>Aleko Company</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="testimonial-panel">
-                  <div class="testimonial-panel-warp">
-                    <div class="testimonial-icon"><i class="icon-Quote-Icon"></i></div>
-                    <div class="testimonial-body">
-                      <div class="testimonial-img"><img src="assets/images/testimonial/4.jpg" alt="Testimonial Author"/></div>
-                      <div class="testimonial-content">
-                        <div class="testimonial-rating"><i class="icon-Star-1"></i><i class="icon-Star-1"></i><i class="icon-Star-1"></i><i class="icon-Star-1"></i><i class="icon-Star-1"></i></div>
-                        <p>Elexpress Freight Logistics International customer service is some of the best we have ever had with ocean we like to ship as much as possible with you all.</p>
-                        <div class="testimonial-meta">
-                          <h4>Marko Smith</h4>
-                          <p>Aify Agency</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- End .row-->
-        </div>
-        <!-- End .container-->
-      </section>
+
+
       <hr/>
       <!--
       ============================

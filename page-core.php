@@ -14,7 +14,7 @@
                 </div>
                 <div class="clearfix"></div>
                 <ol class="breadcrumb justify-content-center">
-                  <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+                  <li class="breadcrumb-item"><a href="/">Home</a></li>
                   <li class="breadcrumb-item"><a href="#">company</a></li>
                   <li class="breadcrumb-item active" aria-current="page">Core Values</li>
                 </ol>

@@ -31,11 +31,11 @@
 
 				</section>
 			  <ul class="nav nav-tabs" style="margin-top: -48px;">
-				<li class="active"><a href="#home">CONSULT LOCAL SHIPPING</a></li>
+				<li class="active"><a href="#home"><strong>CONSULT LOCAL AND INTERNATIONAL SHIPPING</strong></a></li>
 				<!--<li><a href="#menu1">CONSULT SHIPPING ONLINE</a></li>-->
 			  </ul>
 
-			  <div class="tab-content">
+			  <div class="tab-content" style="margin-top: -10px;">
 					<div id="home" class="tab-pane1 fade1 in1 active">
 						<div class="">
 							<section class="track-num">

@@ -87,9 +87,17 @@
                 <div class="entry-content">
                   <div class="entry-bio">
                     <h5>overview</h5>
-                    <p>Our airfreight staff attaches great importance to customizing the booking process for our customers. That’s why we strive to find the air freight solution that best suits your needs. We’ll ask you when the freight is available, what the required delivery date is, and if there’s potential to save on time or cost. Your answers to these and other questions help us decide if you should book the air freight as direct. We'll also see if our sea-air service is a better solution for you.</p>
-                    <p>We have more than twenty years of experience. During that time, we’ve become expert in freight transportation by air and all its related services. We work closely with all major airlines around the world. Ongoing negotiations ensure that we always have the cargo space we need and the ability to offer you competitive rates - even during the high season.</p>
-                    <p>Where possible, we’ll erect and dismantle Unit Load Devices (ULDs), reducing significantly the risk of damage to your shipment and saving you time and expense. We can do this because many of our freight stations have their own ground transportation at or around the airport. </p>
+                    <p>At Elexpress Freight, we offer reliable and efficient warehousing solutions to streamline your supply chain. Our facilities are designed to provide secure storage, real-time inventory management, and seamless distribution, ensuring your goods are handled with the utmost care. </p>
+
+<h3>Why Choose Elexpress Freight for Warehousing?</h3>
+<ul>
+	<li>•	Secure Storage: Our state-of-the-art warehouses are equipped with advanced security systems to protect your inventory.</li>
+	<li>•	Inventory Management: Real-time tracking and monitoring to ensure accurate stock levels and efficient order fulfillment.</li>
+	<li>•	Order Processing & Fulfillment: Fast and precise picking, packing, and shipping to meet your business needs.</li>
+	<li>•	Flexible Storage Solutions: We offer short-term and long-term storage, including climate-controlled options for sensitive goods.</li>
+	<li>•	Seamless Logistics Integration: Our warehousing services work in sync with our shipping and freight solutions for a smooth end-to-end supply chain experience.</li>
+</ul>
+<p>Whether you’re looking for temporary storage or a comprehensive warehousing solution, Elexpress Freight is committed to optimizing your logistics operations. Contact us today to learn more about how we can support your business! </p>
                   </div>
                   <div class="entry-bio entry-bio-2">
                     <h5>stats &amp; charts </h5>

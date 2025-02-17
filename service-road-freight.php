@@ -11,7 +11,7 @@
                 </div>
                 <div class="clearfix"></div>
                 <ol class="breadcrumb justify-content-center">
-                  <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+                  <li class="breadcrumb-item"><a href="/">Home</a></li>
                   <li class="breadcrumb-item"><a href="#">services</a></li>
                   <li class="breadcrumb-item active" aria-current="page">Road Freight</li>
                 </ol>
@@ -87,9 +87,17 @@
                 <div class="entry-content">
                   <div class="entry-bio">
                     <h5>overview</h5>
-                    <p>Our airfreight staff attaches great importance to customizing the booking process for our customers. That’s why we strive to find the air freight solution that best suits your needs. We’ll ask you when the freight is available, what the required delivery date is, and if there’s potential to save on time or cost. Your answers to these and other questions help us decide if you should book the air freight as direct. We'll also see if our sea-air service is a better solution for you.</p>
-                    <p>We have more than twenty years of experience. During that time, we’ve become expert in freight transportation by air and all its related services. We work closely with all major airlines around the world. Ongoing negotiations ensure that we always have the cargo space we need and the ability to offer you competitive rates - even during the high season.</p>
-                    <p>Where possible, we’ll erect and dismantle Unit Load Devices (ULDs), reducing significantly the risk of damage to your shipment and saving you time and expense. We can do this because many of our freight stations have their own ground transportation at or around the airport. </p>
+                    <p>At Elexpress Freight, we offer fast, reliable, and cost-effective road freight solutions to ensure your goods reach their destination safely and on time. With a strong logistics network and a fleet of modern vehicles, we provide efficient transportation across local, regional, and cross-border routes. </p>
+
+<h3>Why Choose Elexpress Freight for Road Freight?</h3>
+<ul>
+	<li>•	Flexible Transport Options: Full Truckload (FTL) and Less Than Truckload (LTL) services to match your shipping needs.</li>
+	<li>•	Fast & Reliable Delivery: Timely pickups and deliveries with optimized routing for efficiency.</li>
+	<li>•	Secure & Safe Handling: Advanced tracking systems and experienced drivers ensure cargo safety.</li>
+	<li>•	Customs & Regulatory Assistance: Smooth cross-border transportation with expert customs support.</li>
+	<li>•	Cost-Effective Solutions: Competitive pricing without compromising service quality.</li>
+</ul>
+<p>From small packages to large shipments, Elexpress Freight delivers efficient road freight solutions tailored to your business. Contact us today to get a quote and keep your supply chain moving! </p>
                   </div>
                   <div class="entry-bio entry-bio-2">
                     <h5>stats &amp; charts </h5>

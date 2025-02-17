@@ -11,7 +11,7 @@
                 </div>
                 <div class="clearfix"></div>
                 <ol class="breadcrumb justify-content-center">
-                  <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+                  <li class="breadcrumb-item"><a href="/">Home</a></li>
                   <li class="breadcrumb-item"><a href="#">services</a></li>
                   <li class="breadcrumb-item active" aria-current="page">Ocean Freight</li>
                 </ol>
@@ -87,9 +87,17 @@
                 <div class="entry-content">
                   <div class="entry-bio">
                     <h5>overview</h5>
-                    <p>Our airfreight staff attaches great importance to customizing the booking process for our customers. That’s why we strive to find the air freight solution that best suits your needs. We’ll ask you when the freight is available, what the required delivery date is, and if there’s potential to save on time or cost. Your answers to these and other questions help us decide if you should book the air freight as direct. We'll also see if our sea-air service is a better solution for you.</p>
-                    <p>We have more than twenty years of experience. During that time, we’ve become expert in freight transportation by air and all its related services. We work closely with all major airlines around the world. Ongoing negotiations ensure that we always have the cargo space we need and the ability to offer you competitive rates - even during the high season.</p>
-                    <p>Where possible, we’ll erect and dismantle Unit Load Devices (ULDs), reducing significantly the risk of damage to your shipment and saving you time and expense. We can do this because many of our freight stations have their own ground transportation at or around the airport. </p>
+                    <p>At Elexpress Freight, we provide reliable and cost-effective ocean freight solutions to help businesses transport goods across the globe. Whether you need full container loads (FCL) or less than container loads (LCL), our extensive network and expertise ensure smooth and efficient shipping.</p>
+
+<h3>Why Choose Elexpress Freight for Ocean Freight?</h3>
+<ul>
+	<li>•	Global Coverage: We partner with major shipping lines to offer worldwide transportation.</li>
+	<li>•	Flexible Shipping Options: Choose between FCL for large shipments or LCL for cost-effective smaller loads.</li>
+	<li>•	Custom Clearance Assistance: Our experts help navigate customs regulations and documentation.</li>
+	<li>•	End-to-End Tracking: Stay updated with real-time shipment tracking and updates.</li>
+	<li>•	Cost-Effective Solutions: Competitive pricing without compromising on reliability and security.</li>
+</ul>
+<p>Whether you’re shipping bulk cargo, specialized equipment, or retail goods, Elexpress Freight ensures a smooth and efficient ocean freight experience. Contact us today to get a quote and streamline your global shipping!</p>
                   </div>
                   <div class="entry-bio entry-bio-2">
                     <h5>stats &amp; charts </h5>
