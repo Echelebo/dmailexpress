@@ -83,12 +83,12 @@ extract($data);
 
             <h5 class="card-heading-x"><?php echo $tracking; ?></h5>
 </div>
-<table style="border: none; border-collapse: collapse;">
+<table style="border: none; border-collapse: collapse; width: 100%;">
     <tr>
-        <td class="text-left" style="padding: 10px; width: 50%;">
+        <td class="text-left" style="padding: 10px;">
             Ship Date <br /><strong><?php echo $pick_date; ?></strong>
 </td>
-<td class="text-left" style="padding: 10px; width: 50%;">
+<td class="text-left" style="padding: 10px;">
             Actual Delivery <br /><strong><?php echo strtoupper($status); ?></strong>
 </td>
     </tr>
@@ -103,17 +103,17 @@ extract($data);
 
 <h5 class="card-heading-x">Arrived Port</h5>
 </div>
-<table style="border: none; border-collapse: collapse;">
+<table style="border: none; border-collapse: collapse; width: 100%;">
     <tr>
-        <td class="text-left" style="padding: 10px; width: 50%;">
+        <td class="text-left" style="padding: 10px;">
             <?php echo strtoupper($s_add); ?>
 </td>
-<td class="text-left" style="padding: 10px; width: 50%;">
+<td class="text-left" style="padding: 10px;">
             <?php echo strtoupper($pick_time); ?>
 </td>
     </tr>
     <tr>
-    <td class="text-left" style="padding: 10px; width: 50%;">
+    <td class="text-left" style="padding: 10px;">
             <strong><?php echo $qty; ?> PIECE SHIPMENT</strong>
 </td>
     </tr>
