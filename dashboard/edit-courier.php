@@ -209,7 +209,7 @@ include("header.php");
 
 																			<div class="col-sm-3 form-group">
 																				<label class="text-success">Package Weight(kg)</label>
-																				<input  type="text" onblur="if(this.value == ''){this.value='0'}"  class="form-control" name="Weight" value="<?php echo $weight; ?>"  />
+																				<input  type="text"   class="form-control" name="Weight" value="<?php echo $weight; ?>"  />
 																			</div>
                                                                             <div class="col-sm-3 form-group">
 																				<label class="text-success">Total Package Weight(kg)</label>
