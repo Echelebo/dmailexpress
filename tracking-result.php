@@ -26,8 +26,8 @@ require_once('dashboard/funciones.php');
 
 $tracking= $_POST['shipping'];
 
-$sql = "SELECT c.cid, c.tracking, c.cons_no, c.letra, c.book_mode, c.schedule, c.paisdestino, c.pick_time, c.pick_time2, c.invice_no, c.mode, c.type, c.weight, c.comments, c.ship_name, c.phone,
-c.s_add, c.rev_name, c.r_phone, c.r_add, c.pick_date, c.user, s.color, c.status, c.lati, c.lngi FROM courier c, service_mode s WHERE s.servicemode = c.status AND c.tracking = '$tracking'";
+$sql = "SELECT c.cid, c.tracking, c.cons_no, c.letra, c.book_mode, c.schedule, c.paisdestino, c.pick_time, c.pick_time2, c.invice_no, c.mode, c.type, c.weight, c.weightx, c.comments, c.ship_name,
+c.s_add, c.rev_name, c.r_add, c.pick_date, c.user, s.color, c.status, FROM courier c, service_mode s WHERE s.servicemode = c.status AND c.tracking = '$tracking'";
 
 $result = dbQuery($sql);
 $no = dbNumRows($result);
@@ -192,9 +192,9 @@ extract($data);
             <span style="margin-right: 20px;">Shipper Reference:</span><strong><?php echo strtoupper($invice_no); ?></strong><br /><br />
             <span style="margin-right: 20px;">Expected Delivery Date:</span><strong><?php echo strtoupper($schedule); ?></strong><br /><br />
             <span style="margin-right: 20px;">Service:</span><strong><?php echo strtoupper($mode); ?></strong><br /><br />
-            <span style="margin-right: 20px;">Weight:</span><strong><?php echo strtoupper($weightx); ?>KG</strong><br /><br />
+            <span style="margin-right: 20px;">Weight:</span><strong><?php echo strtoupper($weight); ?>KG</strong><br /><br />
 
-            <span style="margin-right: 20px;">Total Shipment Weight:</span><strong><?php echo strtoupper($weight); ?>KG</strong><br /><br />
+            <span style="margin-right: 20px;">Total Shipment Weight:</span><strong><?php echo strtoupper($weightx); ?>KG</strong><br /><br />
             <span style="margin-right: 20px;">Packaging:</span><strong><?php echo strtoupper($type); ?></strong><br /><br />
 
 		</div>
