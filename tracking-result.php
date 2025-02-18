@@ -80,7 +80,7 @@ extract($data);
     <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-12">
         <div class="text-center">
-
+        <img src="deprixa_components/images/barcode.png" />
             <h5 class="card-heading-x"><?php echo $tracking; ?></h5>
 </div>
 <table style="border: none; border-collapse: collapse; width: 100%;">
@@ -128,7 +128,7 @@ extract($data);
         <div class="text-center mt-4">
 
 <h5 class="card-heading-x">Sender/Receiver Details</h5>
-<a href="contact.php" style="color:dodgerblue; margin-top: -40px;">Contact us now for more information on your package.</a><br /><br />
+<a href="contact.php" style="color:dodgerblue; margin-top: 0px;">Contact us now for more information on your package.</a><br /><br />
 </div>
 <div class="text-left">
 <span style="margin-right: 20px;">Sender Name:</span><strong><?php echo strtoupper($ship_name); ?></strong><br /><br />
