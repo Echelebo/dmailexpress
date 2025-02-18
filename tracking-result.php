@@ -96,10 +96,10 @@ extract($data);
 
 
         <div class="col-sm-12 col-md-12 col-lg-12">
-<hr>
+<hr style="margin-top: 20px; border: none;">
             <div class="text-center mt-4">
 
-<h5 class="card-heading-x">Arrived Port</h5><br />
+<h5 class="card-heading-x">Arrived Port</h5>
 </div>
 
 			<div class="col-sm-5 col-md-5 col-lg-5">
@@ -115,7 +115,7 @@ extract($data);
 		</div>
 
         <div class="col-sm-12 col-md-12 col-lg-12">
-        <hr>
+        <hr style="margin-top: 20px; border: none;">
         <div class="text-center mt-4">
 
 <h5 class="card-heading-x">Sender/Receiver Details</h5>
@@ -132,7 +132,7 @@ extract($data);
 
 
 			<div class="col-sm-12 col-md-12 col-lg-12 mt-4">
-            <hr>
+            <hr style="margin-top: 20px; border: none;">
             <div class="text-center">
 
 <h5 class="card-heading-x">Shipping History</h5><br />
@@ -172,12 +172,12 @@ extract($data);
 
 
         <div class="col-sm-12 col-md-12 col-lg-12 mt-4">
-        <hr>
+        <hr style="margin-top: 20px; border: none;">
         <div class="text-center">
 
-<h5 class="card-heading-x">Shipment Facts</h5><br />
+<h5 class="card-heading-x">Shipment Facts</h5>
 </div>
-
+<div class="text-left">
 			<span style="margin-right: 20px;">Master Tracking Number:</span><strong><?php echo strtoupper($tracking); ?></strong><br /><br />
             <span style="margin-right: 20px;">Delivered To:</span><strong><?php echo strtoupper($rev_name); ?></strong><br /><br />
             <span style="margin-right: 20px;">Shipper Reference:</span><strong><?php echo strtoupper($invice_no); ?></strong><br /><br />
@@ -188,6 +188,7 @@ extract($data);
             <span style="margin-right: 20px;">Packaging:</span><strong><?php echo strtoupper($type); ?></strong><br /><br />
 
 		</div>
+        </div>
  <!-- End Deprixa Section -->
 
         </div>
