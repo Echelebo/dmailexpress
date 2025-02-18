@@ -192,6 +192,7 @@ extract($data);
             <span style="margin-right: 20px;">Shipper Reference:</span><strong><?php echo strtoupper($invice_no); ?></strong><br /><br />
             <span style="margin-right: 20px;">Expected Delivery Date:</span><strong><?php echo strtoupper($schedule); ?></strong><br /><br />
             <span style="margin-right: 20px;">Service:</span><strong><?php echo strtoupper($mode); ?></strong><br /><br />
+            <span style="margin-right: 20px;">Weight:</span><strong><?php echo strtoupper($weightx); ?>KG</strong><br /><br />
 
             <span style="margin-right: 20px;">Total Shipment Weight:</span><strong><?php echo strtoupper($weight); ?>KG</strong><br /><br />
             <span style="margin-right: 20px;">Packaging:</span><strong><?php echo strtoupper($type); ?></strong><br /><br />

@@ -45,6 +45,7 @@
 			'Receiveraddress'       => 'trim|sanitize_string',
 			'Receiveremail'     	=> 'trim|sanitize_email',
 			'Weight'				=> 'trim|sanitize_string',
+            'Weightx'				=> 'trim|sanitize_string',
 			'Qnty'       			=> 'trim|sanitize_string',
 			'Pickuptime'	  		=> 'trim|sanitize_string',
 			'state'     			=> 'trim|sanitize_string',
@@ -63,6 +64,7 @@
 			'Receiveraddress'       => 'required',
 			'Receiveremail'			=> 'required|valid_email',
 			'Weight'				=> 'required',
+            'Weightx'				=> 'required',
 			'Qnty'       			=> 'required',
 			'Pickuptime'     		=> 'required',
 			'state'     			=> 'required',
@@ -93,6 +95,7 @@
 		$letra 				= $_POST['letra'];
 		$Shiptype 			= $_POST['Shiptype'];
 		$Weight 			= $_POST['Weight'];
+        $Weightx 			= $_POST['Weightx'];
 		$shipping_subtotal 	= $_POST['shipping_subtotal'];
 		$pesoreal 			= $_POST['pesoreal'];
 		$Invoiceno 			= $_POST['Invoiceno'];
@@ -135,9 +138,9 @@
 				}
 			}
 
-		$sql = "INSERT INTO courier (tracking,cons_no, letra,ship_name, s_add, locker, correo, rev_name, r_add, email, type, weight, shipping_subtotal, invice_no, qty, book_mode, declarado, mode, pick_date, schedule, pick_time, pick_time2, iso,
+		$sql = "INSERT INTO courier (tracking,cons_no, letra,ship_name, s_add, locker, correo, rev_name, r_add, email, type, weight, weightx, shipping_subtotal, invice_no, qty, book_mode, declarado, mode, pick_date, schedule, pick_time, pick_time2, iso,
 		state, ciudad, paisdestino, iso1, state1, city1, status, comments, officename, status_delivered, user, book_date, pesoreal)
-		VALUES('$cons_no','$cons_no', '$pre', '$Shippername', '$Shipperaddress', '$Shipperlocker', '$Shipperemail', '$Receivername', '$Receiveraddress', '$Receiveremail', '$Shiptype',$Weight , '$shipping_subtotal', '$Invoiceno', $Qnty, '$bookingmode', '$Mode', '$Packupdate', '$Schedule', '$Pickuptime', '$Pickuptime', '$iso', '$state', '$ciudad', '$paisdestino', '$iso1', '$state1', '$city1', '$status', '$Comments', '$officename', '$status_delivered', '$user', curdate(), '$pesoreal')";
+		VALUES('$cons_no','$cons_no', '$pre', '$Shippername', '$Shipperaddress', '$Shipperlocker', '$Shipperemail', '$Receivername', '$Receiveraddress', '$Receiveremail', '$Shiptype', '$Weight', '$Weightx', '$shipping_subtotal', '$Invoiceno', $Qnty, '$bookingmode', '$Mode', '$Packupdate', '$Schedule', '$Pickuptime', '$Pickuptime', '$iso', '$state', '$ciudad', '$paisdestino', '$iso1', '$state1', '$city1', '$status', '$Comments', '$officename', '$status_delivered', '$user', curdate(), '$pesoreal')";
 			//echo $sql;
 		dbQuery($sql);
 

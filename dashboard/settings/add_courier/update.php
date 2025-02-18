@@ -34,6 +34,7 @@
 
 	$Shiptype = $_POST['Shiptype'];
 	$Weight = $_POST['Weight'];
+    $Weightx = $_POST['Weightx'];
 	$shipping_subtotal = $_POST['shipping_subtotal'];
 	$Invoiceno = $_POST['Invoiceno'];
 	$Qnty = $_POST['Qnty'];
@@ -60,7 +61,7 @@
 	$user = $_POST['user'];
 
 	$sql = "UPDATE courier
-   SET ship_name='$Shippername',s_add='$Shipperaddress', rev_name='$Receivername',r_add='$Receiveraddress', email='$Receiveremail', type='$Shiptype', weight='$Weight', invice_no='$Invoiceno', mode ='$Mode', pick_date='$Packupdate' , schedule='$Schedule',pick_time='$Pickuptime',iso='$iso',state='$state',ciudad='$ciudad',paisdestino='$paisdestino',iso1='$iso1',state1='$state1',city1='$city1',book_mode='$Bookingmode',qty='$Qnty', shipping_subtotal='$shipping_subtotal', status='$status', comments='$Comments', officename='$officename', user='$user' , pesoreal='$pesoreal'
+   SET ship_name='$Shippername',s_add='$Shipperaddress', rev_name='$Receivername',r_add='$Receiveraddress', email='$Receiveremail', type='$Shiptype', weight='$Weight', weightx='$Weightx', invice_no='$Invoiceno', mode ='$Mode', pick_date='$Packupdate' , schedule='$Schedule',pick_time='$Pickuptime',iso='$iso',state='$state',ciudad='$ciudad',paisdestino='$paisdestino',iso1='$iso1',state1='$state1',city1='$city1',book_mode='$Bookingmode',qty='$Qnty', shipping_subtotal='$shipping_subtotal', status='$status', comments='$Comments', officename='$officename', user='$user' , pesoreal='$pesoreal'
    WHERE cid = '$cid'";
 		//echo $sql;
 	dbQuery($sql);

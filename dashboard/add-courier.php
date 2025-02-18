@@ -295,6 +295,10 @@ include("header.php");
 													<label class="text-danger"><strong>Package Weight(kg)<strong></label>
 													<input type="text" class="form-control" required  name="Weight" value="0" placeholder="Package weight" />
 												</div>
+                                                <div class="col-sm-3 form-group">
+													<label class="text-danger"><strong>Total Package Weight(kg)<strong></label>
+													<input type="text" class="form-control" required  name="Weightx" value="0" placeholder="Total Package weight" />
+												</div>
 												<div class="col-sm-3 form-group">
 													<label class="text-danger"><strong><?php echo $SubtotalEnvio; ?><strong></i></label>
 													<input  type="text" class="form-control" name="shipping_subtotal" id="resultado" value="0" />

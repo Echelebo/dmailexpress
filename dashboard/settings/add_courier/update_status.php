@@ -35,7 +35,6 @@
 	$letra = $_POST['letra'];
 	$user = $_POST['user'];
 	$ship_name = $_POST['ship_name'];
-	$phone = $_POST['phone'];
 	$correo = $_POST['correo'];
 	$email = $_POST['email'];
 
@@ -49,8 +48,8 @@
 		$pre  = $row["prefijo"];
 	}
 
-	$sql = "INSERT INTO courier_track (cid, cons_no, letra, pick_time, status, comments, bk_time, ship_name, phone, correo, email, user)
-			VALUES ($cid, '$cons_no', '$pre', '$pick_time | $citaddress', '$status', '$comments', NOW(), '$ship_name', '$phone', '$correo', '$email', '$user')";
+	$sql = "INSERT INTO courier_track (cid, cons_no, letra, pick_time, status, comments, bk_time, ship_name, correo, email, user)
+			VALUES ($cid, '$cons_no', '$pre', '$pick_time | $citaddress', '$status', '$comments', NOW(), '$ship_name', '$correo', '$email', '$user')";
 	dbQuery($sql);
 
 	$sql_1 = "UPDATE courier SET status='$status', pick_time2 = '$pick_time' WHERE cid = $cid AND cons_no = '$cons_no'";
@@ -84,7 +83,7 @@
 
 	// Step 2: Use sendText( $to, $from, $message ) method to send a message.
 
-	$info = $nexmo_sms->sendText($_POST['phone'], $_POST['ship_name'], ''.$ship_name.', '.$apia.' '.$pre.'-'.$cons_no.'. '.$apib.' '.$status.'. '.$apic.' '.$pick_time.'|'.$citaddress.'');
+	// $info = $nexmo_sms->sendText($_POST['phone'], $_POST['ship_name'], ''.$ship_name.', '.$apia.' '.$pre.'-'.$cons_no.'. '.$apib.' '.$status.'. '.$apic.' '.$pick_time.'|'.$citaddress.'');
 	// Step 3: Display an overview of the message
 
 	$result1 =  mysql_query("SELECT * FROM company");
