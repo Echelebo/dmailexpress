@@ -85,10 +85,10 @@ extract($data);
 </div>
 <table style="border: none; border-collapse: collapse;">
     <tr>
-        <td class="text-left" style="padding: 10px;">
+        <td class="text-left" style="padding: 10px; width: 50%;">
             Ship Date <br /><strong><?php echo $pick_date; ?></strong>
 </td>
-<td class="text-left" style="padding: 10px;">
+<td class="text-left" style="padding: 10px; width: 50%;">
             Actual Delivery <br /><strong><?php echo strtoupper($status); ?></strong>
 </td>
     </tr>
@@ -105,15 +105,15 @@ extract($data);
 </div>
 <table style="border: none; border-collapse: collapse;">
     <tr>
-        <td class="text-left" style="padding: 10px;">
+        <td class="text-left" style="padding: 10px; width: 50%;">
             <?php echo strtoupper($s_add); ?>
 </td>
-<td class="text-left" style="padding: 10px;">
+<td class="text-left" style="padding: 10px; width: 50%;">
             <?php echo strtoupper($pick_time); ?>
 </td>
     </tr>
     <tr>
-    <td class="text-left" style="padding: 10px;">
+    <td class="text-left" style="padding: 10px; width: 50%;">
             <strong><?php echo $qty; ?> PIECE SHIPMENT</strong>
 </td>
     </tr>
