@@ -79,16 +79,16 @@ extract($data);
 <div class="container" style="color: #333333;">
     <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-12">
-        <div class="text-center">
+        <div class="text-center col-12">
 
             <h5 class="card-heading-x"><?php echo $tracking; ?></h5>
 </div>
 
-			<div class="col-sm-5 col-md-5 col-lg-5">
+			<div class="col-sm-6 col-md-6 col-lg-6">
                <div class="text-left" style="margin-top: -15px">Ship Date <br /><strong><?php echo $pick_date; ?></strong>
             </div>
             </div>
-            <div class="col-sm-5 col-md-5 col-lg-5">
+            <div class="col-sm-6 col-md-6 col-lg-6">
             <div class="text-left"> Actual Delivery <br /><strong><?php echo strtoupper($status); ?></strong>
             </div>
             </div>
@@ -97,18 +97,18 @@ extract($data);
 
         <div class="col-sm-12 col-md-12 col-lg-12">
 <hr style="margin-top: 20px; border: none;">
-            <div class="text-center mt-4">
+            <div class="text-center col-12 mt-4">
 
 <h5 class="card-heading-x">Arrived Port</h5>
 </div>
 
-			<div class="col-sm-5 col-md-5 col-lg-5">
+			<div class="col-sm-6 col-md-6 col-lg-6">
             <div class="text-left" style="margin-top: -15px"><?php echo strtoupper($s_add); ?></div>
         </div>
-            <div class="col-sm-5 col-md-5 col-lg-5">
+            <div class="col-sm-6 col-md-6 col-lg-6">
             <div class="text-left"><?php echo strtoupper($pick_time); ?></div>
         </div>
-        <div class="col-sm-5 col-md-5 col-lg-5">
+        <div class="col-sm-6 col-md-6 col-lg-6">
             <div class="text-left"><strong><?php echo $qty; ?> PIECE SHIPMENT</strong></div>
         </div>
 
