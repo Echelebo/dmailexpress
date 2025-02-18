@@ -154,43 +154,8 @@
 			//echo $sql;
 		dbQuery($sql_2);
 
-		## Obtengo datos de las facturas tracking
-		$boxsms =  mysql_query("SELECT tracking FROM c_tracking ");
-
-		while($row = mysql_fetch_array($boxsms)) {
-
-			$sms  = $row["tracking"];
-		}
-		mysql_free_result($boxsms);
-
-		## Obtengo datos de la API KEY
-		$apiconfig =  mysql_query("SELECT apikey,apisecret FROM api_sms WHERE id='1' ");
-
-		while($row = mysql_fetch_array($apiconfig)) {
-
-			$api_key  = $row["apikey"];
-			$api_secret  = $row["apisecret"];
-		}
-		mysql_free_result($apiconfig);
-
-		## Obtengo datos configuracion email
-		$settingssms =  mysql_query("SELECT detailsend,detailinvoice,detailprice FROM api_sms WHERE id='2'");
-
-		while($row = mysql_fetch_array($settingssms)) {
-
-			$apia  = $row["detailsend"];
-			$apib  = $row["detailinvoice"];
-			$apic  = $row["detailprice"];
-		}
-		mysql_free_result($settingssms);
 
 
-		// Step 1: Declare new NexmoMessage.
-		$nexmo_sms = new NexmoMessage(''.$api_key.'', ''.$api_secret.'');
-
-		// Step 2: Use sendText( $to, $from, $message ) method to send a message.
-
-		//$info = $nexmo_sms->sendText($_POST['Shipperphone'], $_POST['Shippername'], ''.$Shippername.', '.$apia.' '.$Comments.'. '.$apib.' '.$sms.'. '.$apic.' '.$shipping_subtotal.'');
 		// Step 3: Display an overview of the message
 
 		$result131 =  mysql_query("SELECT * FROM company");
