@@ -18,7 +18,7 @@
 // * here- http://codecanyon.net/licenses/standard                         *
 // *                                                                       *
 // *************************************************************************
- 
+
 error_reporting(E_ERROR | E_WARNING | E_PARSE);
 session_start();
 require_once('../database.php');
@@ -27,7 +27,7 @@ require_once('../library.php');
 require '../requirelanguage.php';
 require("barcode/barcode.class.php");
 	$bar	= new BARCODE();
-	
+
 $cid= $_GET['cid'];
 $cid = decodificar($cid);
 $ss=mysql_query("SELECT * FROM courier WHERE cid=$cid");
@@ -40,16 +40,16 @@ while($rr=mysql_fetch_array($ss)){
   <head>
 
     <title><?php echo $_SESSION['ge_cname']; ?> | <?php echo $rr['tracking']; ?></title>
-	
+
 	<!-- Define Charset -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	
+
 	<!-- Page Description and Author -->
 	<meta name="description" content="<?php echo $_SESSION['ge_description']; ?>"/>
 	<meta name="keywords" content="<?php echo $_SESSION['ge_keywords']; ?>" />
-    <meta name="author" content="Jaomweb">	
-	
+    <meta name="author" content="Jaomweb">
+
 	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 	<link rel="stylesheet" href="../css/font.css" type="text/css" />
 	<link href="../css/style.css" rel="stylesheet" media="all">
@@ -62,24 +62,24 @@ while($rr=mysql_fetch_array($ss)){
       <section>
         <!-- title row -->
 
-		
+
 		<table class="table" style=" margin-left: auto; margin-right: auto; font-family:Arial, Helvetica, sans-serif;" border="0" width="100%" >
 			<tbody>
 				<tr>
-					<td>						
+					<td>
 						<p style="text-align: center;" ><center  width="100%">
 							<div class="output" align="center">
-								<section class="output">    
+								<section class="output">
 									<?php
 										$cid= $_GET['cid'];
 										$cid = decodificar($cid);
 										$cons_no= $_GET['cons_no'];
 										$rs = mysql_query("SELECT cid,tracking FROM courier WHERE cid=$cid");
 										if($dato=mysql_fetch_array($rs)) {
-											
+
 										$numbrr = $dato['tracking'];
 										$link = $bar->BarCode_link("CODE39", "$numbrr");
-										
+
 										}
 									?>
 										<img src='<?php echo $link; ?>' />
@@ -92,10 +92,10 @@ while($rr=mysql_fetch_array($ss)){
 							<tbody>
 								<tr bgcolor="black" style=" border-top-color:#000000; border-right-color:#333; border-right-width:3px;border-right-style:solid;  border-collapse: collapse;">
 									<td>
-										<p style="text-align: center;"><font size=5 face="arial" color="white"><strong><?php echo $REMITE; ?></strong></font></p>										
+										<p style="text-align: center;"><font size=5 face="arial" color="white"><strong><?php echo $REMITE; ?></strong></font></p>
 									</td>
 									<td>
-										<p style="text-align: center;"><font size=5 face="arial" color="white"><strong><?php echo $DESTINA; ?></strong></font></p>										
+										<p style="text-align: center;"><font size=5 face="arial" color="white"><strong><?php echo $DESTINA; ?></strong></font></p>
 									</td>
 								</tr>
 								<tr>
@@ -114,20 +114,20 @@ while($rr=mysql_fetch_array($ss)){
 							<tbody>
 								<tr bgcolor="black">
 									<td>
-										<p style="text-align: center;"><font size=5 color="white"><strong><?php echo $ORIGEN; ?></strong></font></p>										
+										<p style="text-align: center;"><font size=5 color="white"><strong><?php echo $ORIGEN; ?></strong></font></p>
 									</td>
 									<td>
-										<p style="text-align: center;"><font size=5 color="white"><strong><?php echo $DESTINO; ?></strong></font></p>										
+										<p style="text-align: center;"><font size=5 color="white"><strong><?php echo $DESTINO; ?></strong></font></p>
 									</td>
 								</tr>
 								<tr>
 									<font size=4><td align="center"  style=" border-top-color:#000000; border-right-color:#333; border-right-width:3px;border-right-style:solid;  border-collapse: collapse;">
-										<p style="text-align: center; "><?php echo $_SESSION['ge_caddress']; ?></p>   
-										<p style="text-align: center;"><?php echo $_SESSION['ge_cphone']; ?>, <?php echo $_SESSION['ge_cemail']; ?></p>
+										<p style="text-align: center; "><?php echo $_SESSION['ge_caddress']; ?></p>
+										<p style="text-align: center;"></p>
 									</td>
 									<td>
 										<p style="text-align: center;"><?php echo $rr['r_add']; ?></p>
-										<p style="text-align: center;"><?php echo $rr['r_phone']; ?> - <?php echo $rr['telefono1']; ?>, <?php echo $rr['email']; ?></p>
+										<p style="text-align: center;"></p>
 									</td></font>
 								</tr>
 							</tbody>
@@ -135,10 +135,7 @@ while($rr=mysql_fetch_array($ss)){
 						<table    style="text-align: center; table-layout:fixed;" border="1"  width="100%">
 							<tbody>
 								<tr style="border: hidden;">
-									<td>
-										<p><strong><?php echo $PESOVOLUMEN; ?></strong></p>
-										<p><font size=4><?php echo $rr['altura']; ?> X <?php echo $rr['ancho']; ?> X <?php echo $rr['longitud']; ?> - <?php echo $rr['totalpeso']; ?></font></p>
-									</td>
+
 									<td>
 										<p><strong><?php echo $TERMINO; ?></strong></p>
 										<p><font size=4><strong><?php echo $rr['book_mode']; ?></font></strong></p>
@@ -163,7 +160,7 @@ while($rr=mysql_fetch_array($ss)){
 				</tr>
 			</tbody>
 		</table>
-		
+
       </section><!-- /.content -->
     </div><!-- ./wrapper -->
 

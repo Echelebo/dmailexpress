@@ -95,13 +95,10 @@ extract($row);
             <?php echo $REMITE; ?>
             <address>
               <h4><strong><?php echo $ship_name; ?></strong></h4><br>
-
-               <b><?php echo $telefono; ?>:</b>  <?php echo $phone; ?><br/>
               <b><?php echo $direccion; ?>:</b> <?php echo $s_add; ?><br/>
 			  <b><?php echo $paisorigen; ?>:</b> <?php echo $pick_time; ?><br/>
 			  <b><?php echo $ciudadorigen; ?>:</b> <?php echo $ciudad; ?><br/>
-			  <b><?php echo $idcliente; ?>:</b> <?php echo $cc; ?><br/>
-			  <b><?php echo $L_['lockerid']; ?>:</b>&nbsp;&nbsp;<?php echo $locker; ?>
+
             </address>
           </div><!-- /.col -->
           <div class="col-sm-4 invoice-col">
@@ -109,13 +106,11 @@ extract($row);
             <address>
               <h4><strong><?php echo $rev_name; ?></strong></h4><br>
 
-              <b><?php echo $telefono1; ?>:</b> <?php echo $r_phone; ?><br/>
-			  <b><?php echo $telefono2; ?>:</b> <?php echo $telefono1; ?><br/>
 			  <b><?php echo $direccion1; ?>:</b> <?php echo $r_add; ?><br/>
 			  <b><?php echo $email1; ?>:</b> <?php echo $email; ?><br/>
               <b><?php echo $paisdestino1; ?>:</b> <?php echo $paisdestino; ?><br/>
 			  <b><?php echo $ciudaddestino; ?>:</b> <?php echo $city1; ?><br/>
-			  <b><?php echo $idcliente1; ?>:</b> <?php echo $cc_r; ?><br/>
+
             </address>
           </div><!-- /.col -->
           <div class="col-sm-4 invoice-col">
@@ -151,7 +146,7 @@ extract($row);
 			<br/>
             <b><?php echo $pesoenvio; ?>:</b>&nbsp;<?php echo $weight; ?>&nbsp; <?php echo $_SESSION['ge_measure']; ?><br/>
 			<b><?php echo $metodopago; ?>:</b> <small class="label label-danger"><i class="fa fa-money"></i>&nbsp;&nbsp;<?php echo $book_mode; ?></small><br/>
-			<b><?php echo $seguroenvio; ?>:</b>&nbsp;<?php echo $_SESSION['ge_curr']; ?>&nbsp;<?php echo $declarate; ?><br/>
+
           </div><!-- /.col -->
         </div><!-- /.row -->
 
@@ -162,9 +157,9 @@ extract($row);
               <thead>
                 <tr>
                   <th><?php echo $cantidad; ?></th>
-                  <th><?php echo $producto; ?></th>
+                  <th>Packaging</th>
                   <th><?php echo $estadoi; ?></th>
-                  <th><?php echo $descripcion; ?></th>
+                  <th>Package Name</th>
                   <th><?php echo $subtotal; ?></th>
                 </tr>
               </thead>

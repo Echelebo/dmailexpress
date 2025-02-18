@@ -162,7 +162,7 @@ include("header.php");
 												</div>
 												<div class="col-sm-8 form-group">
 
-													<label class="control-label" ><?php echo $NOMBREREMITENTE; ?><span class="required-field">*</span></label>
+													<label class="control-label" >Sender Name<span class="required-field">*</span></label>
 													 <input type="text" class="form-control" name="Shippername"  id="Shippername" autocomplete="on" list="customers" />
 													   <datalist id="customers">
 														<?php
@@ -178,29 +178,21 @@ include("header.php");
 											<div class="row">
 												<div id="divRemi">
 													<div class="col-sm-6 form-group">
-														<label  class="control-label"><?php echo $DIRECCION; ?><span class="required-field">*</span></label>
+														<label  class="control-label">Arrived Port Address<span class="required-field">*</span></label>
 														<input type="text"  class="form-control" name="Shipperaddress" id="Shipperaddress" placeholder="<?php echo $placeremi; ?>" />
 													</div>
 
-													<div class="col-sm-3 form-group">
-														<label  class="control-label"><i class="fa fa-phone icon text-default-lter"></i>&nbsp;<?php echo $TELEFONO; ?></label>
-														<input type="tel" class="form-control" name="Shipperphone" id="Shipperphone" placeholder="<?php echo $placetele; ?>" />
-													</div>
 
-													<div class="col-sm-3 form-group">
-														<label class="control-label"><?php echo $CEDULA; ?></i></label>
-														<input type="text" class="form-control" name="Shippercc" id="Shippercc"  placeholder="<?php echo $placeced; ?>" >
-													</div>
 													<div class="col-sm-3 form-group" style="display:none">
 														<label class="control-label"><?php echo $L_['lockerid']; ?></i></label>
 														<input type="text" class="form-control" name="Shipperlocker" id="Shipperlocker"  placeholder="<?php echo $L_['lockerid']; ?>">
 													</div>
 													<div class="col-sm-3 form-group">
-														<label class="control-label"><i class="fa fa-angle-double-right icon text-default-lter"></i>&nbsp;<strong><?php echo $PAISORIGEN; ?></strong></label>
+														<label class="control-label"><i class="fa fa-angle-double-right icon text-default-lter"></i>&nbsp;<strong>Arrived Port Country</strong></label>
 															<input type="text" class="form-control" name="Pickuptime" id="Shippercountry" placeholder="<?php echo $L_['placecountry']; ?>">
 													</div>
 													<div class="col-sm-3 form-group">
-														<label class="control-label"><strong><?php echo $L_STATE; ?></strong></label>
+														<label class="control-label"><strong>Sender State</strong></label>
 															<input  type="text"  class="form-control" name="state"  id="Shipperstate"  placeholder="<?php echo $L_['placestate']; ?>">
 													</div>
 													<div class="col-sm-3 form-group" style="display:none">
@@ -208,18 +200,15 @@ include("header.php");
 															<input type="text" class="form-control" name="iso" id="Shipperiso" placeholder="<?php echo $L_['placeiso']; ?>" >
 													</div>
 													<div class="col-sm-3 form-group">
-														<label class="control-label"><strong><?php echo $CIUDAD; ?></strong></label>
+														<label class="control-label"><strong>Sender City</strong></label>
 															<input  type="text"   class="form-control" id="Shipperciudad" name="ciudad"  placeholder="<?php echo $L_['placecity']; ?>" >
 													</div>
-													<div class="col-sm-3 form-group">
-														<label class="control-label"><strong><?php echo $CODIGOPOSTAL; ?></strong></label>
-															<input  type="text" class="form-control" id="Shipperzipcode" name="zipcode"  placeholder="<?php echo $codigopostal; ?>">
-													</div>
+
 
 
 													<div class="col-sm-12 form-group">
 														<p class="error"></p>
-														<label class="control-label"><?php echo $EMAIL; ?><font color="#FF6100"><?php echo $notaemail; ?></font></i></label>
+														<label class="control-label">Sender Email<font color="#FF6100"><?php echo $notaemail; ?></font></i></label>
 															<input type="email" class="form-control" name="Shipperemail" id="idemail"   placeholder="demo@emo.com" autocomplete=" off" onKeyUp="javascript:validateeMail('idemail')" />
 														<strong><span id="mailOK"></span></strong>
 														<p class="error"></p>
@@ -237,16 +226,9 @@ include("header.php");
 											<!-- Origin Office -->
 
 											   <div class="col-sm-3 form-group">
-												 <label for="zipcode" class="control-label"><i class="fa fa-angle-double-right icon text-default-lter"></i>&nbsp;<strong><?php echo $OFICINAORIGEN; ?></strong></label>
-													<select class="form-control" name="Invoiceno">
-														<?php
-														while($data = dbFetchAssoc($result)){
-														?>
-														<option value="<?php echo $data['off_name']; ?>"><?php echo $data['off_name']; ?></option>
-														<?php
-														}//while
-														?>
-												   </select>
+												 <label for="zipcode" class="control-label"><i class="fa fa-angle-double-right icon text-default-lter"></i>&nbsp;<strong>Shipper Reference</strong></label>
+                                                 <input type="text" class="form-control" name="Invoiceno"  placeholder="Shipper Reference" />
+
 												</div>
 												<div class="col-sm-3 form-group">
 													<label for="ccv" class="control-label"><strong><?php echo $CantidadPaquetes; ?></strong></i></label>
@@ -254,7 +236,7 @@ include("header.php");
 												</div>
 													<!-- Text area -->
 												<div class="col-sm-6 form-group">
-													<label for="inputTextarea" class="control-label"><i class="fa fa-comments icon text-default-lter"></i>&nbsp;<?php echo $DetallesdelEnvio; ?></label>
+													<label for="inputTextarea" class="control-label"><i class="fa fa-comments icon text-default-lter"></i>&nbsp;Package Name</label>
 													<textarea class="form-control" name="Comments" placeholder="<?php echo $placedetails; ?>" ></textarea>
 												</div>
 											</div>
@@ -273,7 +255,7 @@ include("header.php");
 												</div>
 
 												<div class="col-sm-4 form-group">
-													<label class="control-label"><?php echo $TipodeProducto; ?></label>
+													<label class="control-label">Packaging</label>
 													<select  type="text" class="form-control" name="Shiptype"  >
 														<?php
 															$sql="SELECT name FROM type_shipments  GROUP BY name";
@@ -304,64 +286,30 @@ include("header.php");
 
 											 <!-- Payment Mode -->
 											 <div class="row">
-												<div class="col-sm-3 form-group" >
-													<label class="text-danger"><strong><?php echo $_SESSION['ge_curr']; ?>&nbsp;<?php echo $ValorDeclarado; ?><strong></label>
-													<input type="text" class="form-control" onblur="if(this.value == ''){this.value='0'}" onKeyUp="suma();" id="sum2"  name="Totaldeclarate"   value="0" />
-												</div>
-												<div class="col-sm-3 form-group" >
-													<label class="text-danger"><strong><?php echo $Declarado; ?><strong></label>
-													<input type="text" class="form-control" onblur="if(this.value == ''){this.value='0'}" onKeyUp="suma();" id="sum5"  name="Totaldeclarado"  value="4" />
-												</div>
+
+
+
+
+
 												<div class="col-sm-3 form-group">
-													<label for="ccv" class="text-danger"><strong><?php echo $_SESSION['ge_curr']; ?>&nbsp;<?php echo $ValorRecogida; ?><strong></label>
-													<input type="text" class="form-control" onblur="if(this.value == ''){this.value='0'}" onKeyUp="suma();"  id="sum3" name="Totalfreight" value="0" />
-												</div>
-												<div class="col-sm-3 form-group">
-													<label class="text-danger"><strong><?php echo $_SESSION['ge_curr']; ?>&nbsp;<?php echo $PrimerKilo; ?>&nbsp;<?php echo $_SESSION['ge_measure']; ?><strong></label>
-													<input type="text" class="form-control" onblur="if(this.value == ''){this.value='0'}"  onKeyUp="suma();" id="sum1"    name="variable" value="3.25" />
-												</div>
-												<div class="col-sm-3 form-group">
-													<label class="text-danger"><strong><?php echo $_SESSION['ge_curr']; ?>&nbsp;<?php echo $_SESSION['ge_measure']; ?>&nbsp;<?php echo $KiloAdicional; ?><strong></label>
-													<input type="text" class="form-control" onblur="if(this.value == ''){this.value='0'}"  onKeyUp="suma();" id="sum6" name="kiloadicional" value="3.25" />
-												</div>
-												<div class="col-sm-3 form-group">
-													<label class="text-danger"><strong><?php echo $PesoKg; ?>&nbsp;(<?php echo $_SESSION['ge_measure']; ?>)<strong></label>
-													<input type="text" class="form-control" required onblur="if(this.value == ''){this.value='0'}" onKeyUp="suma();"  id="sum4"   name="Weight" value="0" />
+													<label class="text-danger"><strong>Package Weight(kg)<strong></label>
+													<input type="text" class="form-control" required  name="Weight" value="0" placeholder="Package weight" />
 												</div>
 												<div class="col-sm-3 form-group">
 													<label class="text-danger"><strong><?php echo $SubtotalEnvio; ?><strong></i></label>
 													<input  type="text" class="form-control" name="shipping_subtotal" id="resultado" value="0" />
 												</div>
 												<div class="col-sm-3 form-group">
-													<label class="text-danger"><strong><?php echo $_SESSION['ge_curr']; ?>&nbsp;<?php echo $PesoFisico; ?><strong></label>
-													<input type="text" class="form-control"  id="pesoreal" name="pesoreal" onblur="if(this.value == ''){this.value='0'}" >
+													<label class="text-danger"><strong>Package Weight Price(USD)<strong></label>
+													<input type="text" class="form-control"  id="pesoreal" name="pesoreal" >
 												</div>
 											</div>
 
-											<legend><?php echo $pesovolumetrico; ?>:</legend>
+
 
 											<!-- Peso Volumetrico -->
 
-											<div class="row">
-												<div class="col-sm-3 form-group">
-													<label class="text-primary"><strong><?php echo $Altura; ?><strong></label>
-													<input type="text" class="form-control" onblur="if(this.value == ''){this.value='0'}"  onKeyUp="volumetrico();" id="volume1"    name="altura" placeholder="<?php echo $Altura; ?>" />
-												</div>
-												<div class="col-sm-3 form-group">
-													<label class="text-primary"><strong><?php echo $Ancho; ?><strong></label>
-													<input type="text" class="form-control" onblur="if(this.value == ''){this.value='0'}"  onKeyUp="svolumetrico();" id="volume2"    name="ancho" placeholder="<?php echo $Ancho; ?>" />
-												</div>
-												<div class="col-sm-3 form-group">
-													<label class="text-primary"><strong><?php echo $Longitud; ?><strong></label>
-													<input type="text" class="form-control" onblur="if(this.value == ''){this.value='0'}" onKeyUp="volumetrico();" id="volume3"   name="longitud" placeholder="<?php echo $Longitud; ?>" />
-												</div>
 
-												<div class="col-sm-3 form-group">
-													<label class="text-primary"><strong><?php echo $TotalPesoVolumetrico; ?><strong></i></label>
-													<input  type="text" class="form-control" name="totalpeso" id="totalpeso" placeholder="0,00" />
-
-												</div>
-											</div>
 										</fieldset>
 
 										<!-- START Receiver info  -->
@@ -370,7 +318,7 @@ include("header.php");
 
 											<!-- Name -->
 											<div class="form-group">
-												<label  class="control-label"><?php echo $NOMBREDESTINATARIO; ?><span class="required-field">*</span></label>
+												<label  class="control-label">Receiver Name<span class="required-field">*</span></label>
 												<input type="text" class="form-control" name="Receivername" id="Receivername" autocomplete="on" list="customers" >
 
 											</div>
@@ -379,24 +327,14 @@ include("header.php");
 											<!-- Adress and Phone -->
 											<div class="row">
 												<div class="col-sm-3 form-group">
-													<label  class="control-label"><?php echo $DIRECCION; ?><span class="required-field">*</span></label>
+													<label  class="control-label">Receiver Address<span class="required-field">*</span></label>
 													<input type="text"  class="form-control" name="Receiveraddress" id="Receiveraddress" placeholder="<?php echo $placedirdesti; ?>" >
 												</div>
 
-												<div class="col-sm-3 form-group">
-													<label  class="control-label"><i class="fa fa-phone icon text-default-lter"></i>&nbsp;<?php echo $TELEFONO; ?></label>
-													<input type="tel"  class="form-control" name="Receiverphone" id="Receiverphone" placeholder="<?php echo $placeteldesti; ?>" >
-												</div>
 
-												<div class="col-sm-3 form-group">
-													<label  class="control-label"><i class="fa fa-phone icon text-default-lter"></i>&nbsp;<?php echo $TELEFONO2; ?></label>
-													<input type="tel"  class="form-control" name="telefono1" id="Receivertelefono1" placeholder="<?php echo $placeteldesti; ?>">
-												</div>
 
-												<div class="col-sm-3 form-group">
-													<label class="control-label"><?php echo $CEDULA; ?></i></label>
-													<input type="text" class="form-control" name="Receivercc_r" id="Receivercc_r" placeholder="<?php echo $L_['placecedr']; ?>">
-												</div>
+
+
 												<div class="col-sm-3 form-group">
 													<label class="control-label"><i class="fa fa-angle-double-right icon text-default-lter"></i>&nbsp;<strong><?php echo $PAISDESTINO; ?></strong></label>
 														<input  type="text"  class="form-control" name="paisdestino" id="Receivercountry1" placeholder="<?php echo $L_['placecountry1']; ?>" >
@@ -415,10 +353,7 @@ include("header.php");
 													<label class="control-label"><strong><?php echo $CIUDAD; ?></strong></label>
 													<input type="text" class="form-control" name="city1"  id="Receivercity1" placeholder="<?php echo $L_['placecity']; ?>" >
 												</div>
-												<div class="col-sm-3 form-group">
-													<label class="control-label"><strong><?php echo $CODIGOPOSTAL; ?></strong></label>
-														<input  type="text" class="form-control" name="zipcode1" id="Receiverzipcode1" placeholder="<?php echo $codigopostal; ?>">
-												</div>
+
 												<div class="col-sm-12 form-group">
 													<p class="error"></p>
 													<label class="control-label"><?php echo $EMAIL; ?><font color="#FF6100"><?php echo $notaemail; ?></font></i></label>
@@ -455,7 +390,7 @@ include("header.php");
 
 											<!-- Status and Pickup Date -->
 											<div class="form-group">
-												<label for="dtp_input1" class="control-label"><i class="fa fa-calendar icon text-default-lter"></i>&nbsp;<?php echo $FECHARECOLECCIONENVIO; ?></i></label>
+												<label for="dtp_input1" class="control-label"><i class="fa fa-calendar icon text-default-lter"></i>&nbsp;Shipment Date</i></label>
 												<div>
 													<div class="input-group">
 														<input type="text" class="form-control" name="Packupdate" placeholder="mm/dd/yyyy" id="datepicker-autoclose" >
@@ -466,7 +401,7 @@ include("header.php");
 
 											<div class="row">
 												<div class="col-sm-4 form-group">
-													<label for="month" class="control-label"><i class="fa fa-sort-amount-asc icon text-default-lter"></i>&nbsp;<?php echo $estado; ?></label>
+													<label for="month" class="control-label"><i class="fa fa-sort-amount-asc icon text-default-lter"></i>&nbsp;Actual Delivery</label>
 													<select class="form-control" name="status" id="status">
 															<?php
 																$sql="SELECT servicemode FROM service_mode  GROUP BY servicemode";

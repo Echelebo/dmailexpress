@@ -1,4 +1,4 @@
-<?php 
+<?php
 // *************************************************************************
 // *                                                                       *
 // * DEPRIXA -  Integrated Web system                                      *
@@ -28,7 +28,7 @@ require 'requirelanguage.php';
 require 'requirelanguage_image.php';
 
 isUser();
-											 
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -37,9 +37,9 @@ isUser();
   <title><?php echo $_SESSION['ge_cname']; ?> | <?php echo $Paneladministracion; ?></title>
   <meta name="description" content="<?php echo $_SESSION['ge_description']; ?>"/>
   <meta name="keywords" content="<?php echo $_SESSION['ge_keywords']; ?>" />
-  <meta name="author" content="Jaomweb">	
+  <meta name="author" content="Jaomweb">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-  
+
   <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
 
   <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css" type="text/css" />
@@ -48,12 +48,12 @@ isUser();
   <link rel="stylesheet" href="../bower_components/simple-line-icons/css/simple-line-icons.css" type="text/css" />
   <link rel="stylesheet" href="css/font.css" type="text/css" />
   <link rel="stylesheet" href="css/app.css" type="text/css" />
-  
+
 
 </head>
 <body>
 <div class="app app-header-fixed ">
-  
+
   <!-- header -->
   <header id="header" class="app-header navbar" role="menu">
           <!-- navbar header -->
@@ -90,30 +90,30 @@ isUser();
         <form class="navbar-form navbar-form-sm navbar-left shift" ui-shift="prependTo" data-target=".navbar-collapse" role="search" ng-controller="TypeaheadDemoCtrl">
           <div class="form-group">
             <div class="input-group">
-				<font SIZE=3 color="#000000"><span id=tick2></span>				
-				<?php 
+				<font SIZE=3 color="#000000"><span id=tick2></span>
+				<?php
 				//Establecemos zona horaria por defecto
 				date_default_timezone_set($_SESSION['ge_timezone']);
 				//preguntamos la zona horaria
 				date_default_timezone_set($_SESSION['ge_timezone']);
 				echo '' . $_SESSION['ge_timezone'];
 				?></font>&nbsp;&nbsp;<font SIZE=3 color="#2DB200">
-				<?php 						
-				echo date("l F d - Y"); 
+				<?php
+				echo date("l F d - Y");
 				?></font>
 
             </div>
           </div>
         </form>
         <!-- / search form -->
-		<?php				
+		<?php
 			isUser();
 			if($_SESSION['user_type']=='client'){ header('Location: customer'); }
 			$result0 = mysql_query("SELECT * FROM online_booking WHERE  status='Pending'");
-			$nobookings = dbNumRows($result0); 
+			$nobookings = dbNumRows($result0);
 		?>
         <!-- nabar right -->
-        <ul class="nav navbar-nav navbar-right">	 
+        <ul class="nav navbar-nav navbar-right">
           <li class="dropdown">
             <a href="online-bookings.php">
               <i><img src="img/bel.png"></i>
@@ -126,16 +126,16 @@ isUser();
           <li class="dropdown">
 			<?php if(isset($_SESSION['user_type']) && $_SESSION['user_type'] == 'Administrator') { ?>
             <a href="#" data-toggle="dropdown" class="dropdown-toggle clear" data-toggle="dropdown">
-			<?php  					
+			<?php
 				$result3 = mysql_query("SELECT * FROM manager_admin WHERE name='".$_SESSION["user_name"]."' ORDER BY cid DESC");
-				while($row = mysql_fetch_array($result3)) {					
-			?>			
-              <span class="thumb-sm avatar pull-right m-t-n-sm m-b-n-sm m-l-sm"> 
-                  <img src="logo-image/imagen.php?cid=<?php echo $row['cid']; ?>">               				
+				while($row = mysql_fetch_array($result3)) {
+			?>
+              <span class="thumb-sm avatar pull-right m-t-n-sm m-b-n-sm m-l-sm">
+                  <img src="logo-image/imagen.php?cid=<?php echo $row['cid']; ?>">
                 <i class="on md b-white bottom"></i>
               </span>
 			  <?php } ?>
-			  
+
 			  <?php
 				$t = date("H");
 
@@ -144,28 +144,28 @@ isUser();
 				}
 				else if($t < 18){
 				$mensaje = $L_['Goodafternoon'];
-				} 
+				}
 				else{
 				$mensaje = $L_['Goodnight'];
 				}
 			  ?>
-			  
+
               <span class="hidden-sm hidden-md"><?php echo $mensaje; ?>&nbsp;&nbsp;<strong><?php echo $_SESSION['user_name'] ;?></strong></span> <b class="caret"></b>
             </a>
 			<?php } ?>
 
 			<?php if(isset($_SESSION['user_type']) && $_SESSION['user_type'] == 'Employee') { ?>
             <a href="#" data-toggle="dropdown" class="dropdown-toggle clear" data-toggle="dropdown">
-			<?php  					
+			<?php
 				$result3 = mysql_query("SELECT * FROM manager_user WHERE name='".$_SESSION["user_name"]."' ORDER BY cid DESC");
-				while($row = mysql_fetch_array($result3)) {					
+				while($row = mysql_fetch_array($result3)) {
 			?>
-              <span class="thumb-sm avatar pull-right m-t-n-sm m-b-n-sm m-l-sm"> 
-                  <img src="logo-image/imagen-user.php?cid=<?php echo $row['cid']; ?>">               				
+              <span class="thumb-sm avatar pull-right m-t-n-sm m-b-n-sm m-l-sm">
+                  <img src="logo-image/imagen-user.php?cid=<?php echo $row['cid']; ?>">
                 <i class="on md b-white bottom"></i>
               </span>
 			  <?php } ?>
-			  
+
 			  <?php
 				$t = date("H");
 
@@ -174,15 +174,15 @@ isUser();
 				}
 				else if($t < 18){
 				$mensaje = $L_['Goodafternoon'];
-				} 
+				}
 				else{
 				$mensaje = $L_['Goodnight'];
 				}
 			  ?>
               <span class="hidden-sm hidden-md"><?php echo $mensaje; ?>&nbsp;&nbsp;<strong><?php echo $_SESSION['user_name'] ;?></strong></span> <b class="caret"></b>
             </a>
-			<?php } ?>	
-			
+			<?php } ?>
+
             <!-- dropdown -->
             <ul class="dropdown-menu animated fadeInRight w">
               <li>
@@ -190,28 +190,28 @@ isUser();
                   <span><?php echo $Configuracionsistema; ?></span>
                 </a>
               </li>
-			  <?php  					
+			  <?php
 				$result4 = mysql_query("SELECT * FROM manager_admin WHERE name='".$_SESSION["user_name"]."' ORDER BY cid DESC");
-				while($row = mysql_fetch_array($result4)) {					
-				?>	
+				while($row = mysql_fetch_array($result4)) {
+				?>
               <li>
-			    
+
                 <a href="edit-profile.php?cid=<?php echo codificar($row['cid']);?>"><i class="fa fa-users icon text-default-lter"></i>&nbsp;&nbsp;<?php echo $perfil; ?></a>
               </li>
-			  <?php 
-			  } 
-			  ?>	
+			  <?php
+			  }
+			  ?>
 
 			  <?php if(isset($_SESSION['user_type']) && $_SESSION['user_type'] == 'Employee') { ?>
-			  <?php  					
+			  <?php
 				$result90 = mysql_query("SELECT * FROM manager_user WHERE name='".$_SESSION["user_name"]."' ORDER BY cid DESC");
-				while($row = mysql_fetch_array($result90)) {					
-				?>	
+				while($row = mysql_fetch_array($result90)) {
+				?>
 			  <li>
                 <a href="edit-profile-user.php?cid=<?php echo codificar($row['cid']);?>"><i class="fa fa-users icon text-default-lter"></i>&nbsp;&nbsp;<?php echo $perfil; ?></a>
               </li>
 			  <?php }} ?>
-			   
+
               <li class="divider"></li>
               <li>
                 <a href="library.php?action=logOut"><i class="fa fa-sign-out icon text-default-lter"></i>&nbsp;&nbsp;<?php echo $salir; ?></a>
@@ -234,10 +234,10 @@ isUser();
 		  <?php if(isset($_SESSION['user_type']) && $_SESSION['user_type'] == 'Administrator') { ?>
           <div class="clearfix hidden-xs text-center hide" id="aside-user">
             <div class="dropdown wrapper">
-			  <?php  					
+			  <?php
 					$result3 = mysql_query("SELECT * FROM manager_admin WHERE name='".$_SESSION["user_name"]."' ORDER BY cid DESC");
-					while($row = mysql_fetch_array($result3)) {					
-				?> 
+					while($row = mysql_fetch_array($result3)) {
+				?>
 			  <a href="#">
                 <span class="thumb-lg w-auto-folded avatar m-t-sm">
                   <img src="logo-image/imagen.php?cid=<?php echo $row['cid']; ?>" class="img-full" alt="...">
@@ -247,7 +247,7 @@ isUser();
               <a href="#" data-toggle="dropdown" class="dropdown-toggle hidden-folded">
                 <span class="clear">
                   <span class="block m-t-sm">
-                    <strong class="font-bold text-lt"><?php echo $bienvenido; ?></strong> 
+                    <strong class="font-bold text-lt"><?php echo $bienvenido; ?></strong>
                     <b class="caret"></b>
                   </span>
                   <span class="text-muted text-xs block"><?php echo $_SESSION['user_name'] ;?></span>
@@ -261,10 +261,10 @@ isUser();
 		  <?php if(isset($_SESSION['user_type']) && $_SESSION['user_type'] == 'Employee') { ?>
           <div class="clearfix hidden-xs text-center hide" id="aside-user">
             <div class="dropdown wrapper">
-			  <?php  					
+			  <?php
 					$result3 = mysql_query("SELECT * FROM manager_user WHERE name='".$_SESSION["user_name"]."' ORDER BY cid DESC");
-					while($row = mysql_fetch_array($result3)) {					
-				?> 
+					while($row = mysql_fetch_array($result3)) {
+				?>
 			  <a href="#">
                 <span class="thumb-lg w-auto-folded avatar m-t-sm">
                   <img src="logo-image/imagen-user.php?cid=<?php echo $row['cid']; ?>" class="img-full" alt="...">
@@ -274,7 +274,7 @@ isUser();
               <a href="#" data-toggle="dropdown" class="dropdown-toggle hidden-folded">
                 <span class="clear">
                   <span class="block m-t-sm">
-                    <strong class="font-bold text-lt"><?php echo $bienvenido; ?></strong> 
+                    <strong class="font-bold text-lt"><?php echo $bienvenido; ?></strong>
                     <b class="caret"></b>
                   </span>
                   <span class="text-muted text-xs block"><?php echo $_SESSION['user_name'] ;?></span>
@@ -292,7 +292,7 @@ isUser();
               <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
               </li>
               <li class="active">
-                <a href class="auto">      
+                <a href class="auto">
                   <span class="pull-right text-muted">
                     <i class="fa fa-fw fa-angle-right text"></i>
                     <i class="fa fa-fw fa-angle-down text-active"></i>
@@ -319,102 +319,24 @@ isUser();
                       <span><?php echo $enviar; ?></span>
                     </a>
                   </li>
-				  <li>
-                    <a href="consolidate.php">
-                      <b class="label bg-success pull-right"></b>
-					  <i class="fa fa-share-square-o icon text-danger-lter"></i>
-                      <span><?php echo $consolidado; ?></span>
-                    </a>
-                  </li>
+
                 </ul>
               </li>
-			  <?php				
+			  <?php
 				isUser();
 				if($_SESSION['user_type']=='client'){ header('Location: customer'); }
 				$result0 = mysql_query("SELECT * FROM online_booking WHERE  status='Pending'");
-					$nobookings = dbNumRows($result0); 
+					$nobookings = dbNumRows($result0);
 				?>
-				<?php				
+				<?php
 				isUser();
 				if($_SESSION['user_type']=='client'){ header('Location: customer'); }
 				$result00 = mysql_query("SELECT * FROM upload_image_bank");
-					$transfer = dbNumRows($result00); 
+					$transfer = dbNumRows($result00);
 				?>
-              <li>
-                <a href="online-bookings.php">
-                  <b class="badge bg-info pull-right"><?php echo $nobookings; ?></b>
-                  <i class="glyphicon glyphicon-envelope icon text-info-lter"></i>
-                  <span class="font-bold"><?php echo $reservaonline; ?></span>
-                </a>
-              </li>
-			  <li>
-                <a href="transfer-bank.php">
-                  <b class="badge bg-warning pull-right"><?php echo $transfer; ?></b>
-                  <i class="glyphicon glyphicon-sort icon text-warning-lter"></i>
-                  <span class="font-bold"><?php echo $transferencia; ?></span>
-                </a>
-              </li>
-			  <?php if(isset($_SESSION['user_type']) && $_SESSION['user_type'] == 'Administrator') { ?>
-			  <li>
-                <a href="accounting.php">                  
-                  <i class="glyphicon glyphicon-usd icon text-primary-lter"></i>
-                  <span class="font-bold"><?php echo $L_['accounting']; ?></span>
-                </a>
-              </li>
-			  <li>
-                <a href class="auto">      
-                  <span class="pull-right text-muted">
-                    <i class="fa fa-fw fa-angle-right text"></i>
-                    <i class="fa fa-fw fa-angle-down text-active"></i>
-                  </span>
-                  <i class="fa fa-file-text icon text-default-dker"></i>
-                  <span class="font-bold"><?php echo $reportegeneral; ?></span>
-                </a>
-                <ul class="nav nav-sub dk">
-                  <li class="nav-sub-header">
-                    <a href>
-                      <span><?php echo $reportes; ?></span>
-                    </a>
-                  </li>                 
-				  <li>
-                    <a href="shipping-list.php">
-                      <span><?php echo $todoslosenvios; ?></span>
-                    </a>
-                  </li>
-				  <li>
-                    <a href="delivered-list.php">
-                      <span><?php echo $enviosentregados; ?></span>
-                    </a>
-                  </li>
-				  <li>
-                    <a href="delivered-list-online.php">
-                      <span><?php echo $enviosonline; ?></span>
-                    </a>
-                  </li>
-				  <li>
-                    <a href="list-of-shipping-paid.php">
-                      <span><?php echo $enviospefectivo; ?></span>
-                    </a>
-                  </li>
-				   <li>
-                    <a href="list-of-shipping-topay.php">
-                      <span><?php echo $enviospcredito; ?></span>
-                    </a>
-                  </li>
-				   <li>
-                    <a href="list-of-shipping-cash-on-delivery.php">
-                      <span><?php echo $enviospdebito; ?></span>
-                    </a>
-                  </li>
-				  <li>
-                    <a href="consolidate_report.php">
-                      <span><?php echo $consolidados; ?></span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-			  <?php } ?>
-              <li class="line dk"></li>   
+
+
+              <li class="line dk"></li>
 
               <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
 			  <i class="fa fa-cog fa-2x fa-fw text-warning-lter"></i>
@@ -423,17 +345,17 @@ isUser();
               </li>
 			  <?php if(isset($_SESSION['user_type']) && $_SESSION['user_type'] == 'Administrator') { ?>
               <li>
-                <a href="add-office.php">      
+                <a href="add-office.php">
                   <span class="pull-right text-muted">
                   </span>
-				  <?php 
-					 require_once('database.php');					
+				  <?php
+					 require_once('database.php');
 					$sql_2 = "SELECT * FROM offices";
 					$result2 = dbQuery($sql_2);
 					$row2 = mysql_num_rows($result2);
 					$sql_3 = "SELECT * FROM tbl_clients";
 					$result3 = dbQuery($sql_3);
-					$row3 = mysql_num_rows($result3);					
+					$row3 = mysql_num_rows($result3);
 					$sql_5 = "SELECT * FROM manager_admin";
 					$result5 = dbQuery($sql_5);
 					$row5 = mysql_num_rows($result5);
@@ -443,97 +365,46 @@ isUser();
 				  ?>
                   <b class="badge bg-success pull-right"><?php echo $row2; ?></b>
                   <i class="glyphicon glyphicon-map-marker"></i>
-                  <span><?php echo $OFICINAS; ?></span>
+                  <span>Shipper References</span>
                 </a>
-                                    
-              </li>			               		   
-			  <li>
-                <a href="add-new-users-admin.php">
-                  <span class="pull-right text-muted">
-                    <i class="fa fa-fw fa-angle-right text"></i>
-                    <i class="fa fa-fw fa-angle-down text-active"></i>
-                  </span>				  
-				  <i class="fa fa-user icon text-default-lter"></i>
-                  <span><?php echo $ADMINISTRADOR; ?></span>
-                </a>
-                <ul class="nav nav-sub dk">
-                  <li class="nav-sub-header">
-                    <a href>
-                      <span><?php echo $Usuario; ?></span>
-                    </a>
-                  </li>                 
-				  <li>
-                    <a href="add-new-users-admin.php">
-                      <b class="label bg-success pull-right"></b>
-					  <span class="pull-right text-muted">
-					  </span>
-					  <b class="badge bg-danger pull-right"><?php echo $row5; ?></b>
-                      <span><?php echo $Administrador; ?></span>
-                    </a>
-                  </li>
-				  <li>
-					<a href="add-new-users.php">
-					  <span class="pull-right text-muted">
-					  </span>
-					  <b class="badge bg-primary pull-right"><?php echo $row6; ?></b>
-					  <span><?php echo $EMPLEADOS; ?></span>
-					</a>                
-				  </li>	
-                </ul>
+
               </li>
+
 			  <?php } ?>
-			  <li>
-                <a href="management-client.php">
-                  <span class="pull-right text-muted">
-                  </span>
-				  <b class="badge bg-info pull-right"><?php echo $row3; ?></b>
-				  <i class="fa fa-users icon text-default-lter"></i>
-                  <span><?php echo $CLIENTES; ?></span>
-                </a>                
-              </li>			   
+
               <li>
                 <a href="typeshipments.php">
                   <i class="glyphicon glyphicon-gift"></i>
-                  <span><?php echo $tiposproductos; ?></span>
-                </a>   
+                  <span>PACKAGING</span>
+                </a>
               </li>
               <li>
                 <a href="modebookings.php">
                   <i class="fa fa-truck icon text-default-lter"></i>
-                  <span><?php echo $tiposenvios; ?></span>
+                  <span>SERVICE MODE</span>
                 </a>
-              </li>	
+              </li>
 			  <?php if(isset($_SESSION['user_type']) && $_SESSION['user_type'] == 'Administrator') { ?>
 			  <li>
                 <a href="styles.php">
                   <i class="fa fa-magic icon text-default-lter"></i>
-                  <span><?php echo $STYLES; ?></span>
+                  <span>STATUS</span>
                 </a>
-              </li>	
-				<li>
-                <a href="shipping-charge.php">
-                  <i class="fa fa-money"></i>
-                  <span><?php echo $calculoenvios; ?></span>
-                </a>
-              </li>	
+              </li>
 
-              <li class="line dk hidden-folded"></li>  
-							 
-              <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">          
+
+              <li class="line dk hidden-folded"></li>
+
+              <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
                 <span><?php echo $configuracionsistema; ?></span>
-              </li>  
+              </li>
               <li>
                 <a href="preferences.php">
                   <i class="icon-wrench icon text-warning-lter"></i>
                   <span><?php echo $configuracion; ?></span>
                 </a>
               </li>
-			  <li>
-                <a href="notificationsms.php">
-                  <i class="fa fa-comment-o icon text-danger-lter"></i>
-                  <span><?php echo $L_['notifications']; ?></span>
-                </a>
-              </li>
+
 			  <?php }  ?>
               <li>
                 <a href="library.php?action=logOut">
@@ -543,12 +414,12 @@ isUser();
               </li>
             </ul>
           </nav>
-          <!-- nav -->     
+          <!-- nav -->
         </div>
       </div>
   </aside>
   <!-- / aside -->
- 
+
   <script type="text/javascript">
 	var ckeditor_ID=1;
 	var timer;
@@ -590,4 +461,4 @@ isUser();
 		}
 		window.onload=show2
 		//-->
-</script> 
+</script>

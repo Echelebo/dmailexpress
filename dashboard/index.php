@@ -25,36 +25,36 @@ require_once('database.php');
 require_once('funciones.php');
 require_once('library.php');
 require 'requirelanguage.php';
-	
-date_default_timezone_set($_SESSION['ge_timezone']);	
+
+date_default_timezone_set($_SESSION['ge_timezone']);
 $styling=mysql_fetch_array(mysql_query("SELECT * FROM styles"));
 
 	$meses = array('','Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sept','Oct','Nov','Dic');
 	for($x=1;$x<=12;$x=$x+1){
-		$dinero[$x]=0;	
+		$dinero[$x]=0;
 	}
-	
+
 	$anno=date('Y');
-	
+
 	$sql=mysql_query("SELECT * FROM courier");
 	while($row=mysql_fetch_array($sql)){
 		$y=date("Y", strtotime($row['book_date']));
-		
-		$mes=(int)date("m", strtotime($row['book_date'])); 
-		
+
+		$mes=(int)date("m", strtotime($row['book_date']));
+
 		if($y==$anno){
 			$dinero[$mes]=$dinero[$mes]+$row['shipping_subtotal'];
 		}
 	}
 		for($x=1;$x<=12;$x=$x+1){
-		$dineros[$x]=0;	
+		$dineros[$x]=0;
 	}
 	$sql_1=mysql_query("SELECT * FROM courier_online");
 	while($row=mysql_fetch_array($sql_1)){
 		$y=date("Y", strtotime($row['date']));
-		
-		$mes=(int)date("m", strtotime($row['date'])); 
-		
+
+		$mes=(int)date("m", strtotime($row['date']));
+
 		if($y==$anno){
 			$dineros[$mes]=$dineros[$mes]+$row['shipping_subtotal'];
 		}
@@ -68,24 +68,24 @@ isUser();
   <title><?php echo $_SESSION['ge_cname']; ?> | <?php echo $ADMINISTRACION; ?></title>
   <meta name="description" content="<?php echo $_SESSION['ge_description']; ?>"/>
   <meta name="keywords" content="<?php echo $_SESSION['ge_keywords']; ?>" />
-  <meta name="author" content="Jaomweb">	
+  <meta name="author" content="Jaomweb">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-  
+
   <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
 
    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css" type="text/css" />
   <link rel="stylesheet" href="../bower_components/animate.css/animate.css" type="text/css" />
   <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.min.css" type="text/css" />
   <link rel="stylesheet" href="../bower_components/simple-line-icons/css/simple-line-icons.css" type="text/css" />
-  
+
   <link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css">
   <link rel="stylesheet" href="css/font.css" type="text/css" />
   <link rel="stylesheet" href="css/app.css" type="text/css" />
   <!-- Plugins css -->
-  
+
   <script src="js/amcharts.js" type="text/javascript"></script>
   <script src="js/serial.js" type="text/javascript"></script>
-  
+
   <script type="text/javascript">
 		 $(document).ready(function () {
 				$('#grid').DataTable();
@@ -97,14 +97,14 @@ isUser();
 <body>
 
 <?php include("header.php"); ?>
-  
-  
+
+
 <!-- content -->
 <div id="content" class="app-content" role="main">
-	<div class="app-content-body ">	    
+	<div class="app-content-body ">
 
 		<div class="hbox hbox-auto-xs hbox-auto-sm" ng-init="
-			app.settings.asideFolded = false; 
+			app.settings.asideFolded = false;
 			app.settings.asideDock = false;
 		  ">
 		  <!-- main -->
@@ -122,11 +122,11 @@ isUser();
 			<div class="wrapper-md" ng-controller="FlotChartDemoCtrl">
 
 			<!-- stats -->
-			
+
 			<?php include("header-stats.php"); ?>
-			
+
 			<!-- / stats -->
-			
+
 			  <!-- service -->
 			  <div class="panel hbox hbox-auto-xs no-border">
 				<div class="col wrapper">
@@ -147,7 +147,7 @@ isUser();
 							  <th>&nbsp;</th>
 							  <th>&nbsp;</th>
 							  <th>&nbsp;</th>
-							  <th><?php echo $entregar; ?></th>					  
+							  <th><?php echo $entregar; ?></th>
 							  <th><?php echo $numerotracking; ?></th>
 							  <th><?php echo $apagar; ?></th>
 							 <th><?php echo $pagos; ?></th>
@@ -164,45 +164,45 @@ isUser();
 								<?php
 									$result3 = mysql_query("SELECT c.cid, c.tracking, c.cons_no, c.book_mode, c.locker, c.ship_name, c.rev_name, c.shipping_subtotal, c.pick_date, c.user, s.color, c.status
 															FROM courier c, service_mode s WHERE s.servicemode = c.status AND c.status != 'delivered' ORDER BY cid DESC");
-															
+
 									while($row = mysql_fetch_array($result3)) {
 								?>
 								<?php if(isset($_SESSION['user_type']) && $_SESSION['user_type'] == 'Administrator') { ?>
 							  <td align="center">
 							  <a href="#" alt="Borrar Registro" onclick="del_list_admin(<?php echo $row['cid']; ?>);">
-								<img src="img/delete.png"  height="20" width="18"></a></td>																  
-							  <?php } ?>					
+								<img src="img/delete.png"  height="20" width="18"></a></td>
+							  <?php } ?>
 							  <td align="center"><a href="edit-courier.php?cid=<?php echo codificar($row['cid']); ?>">
-							  <img src="img/edit.png"  height="20" width="18"></a></td>				
+							  <img src="img/edit.png"  height="20" width="18"></a></td>
 							  <td align="center"><a data-target="#con-close-modal<?php echo $row['cid']; ?>" data-toggle="modal">
-							  <img src="img/update-status.png"  height="20" width="20"></a></td>							  
+							  <img src="img/update-status.png"  height="20" width="20"></a></td>
 							  <td align="center"><a target="_blank" href="print-invoice/invoice-print.php?cid=<?php echo codificar($row['cid']); ?>">
 							  <img src="img/print.png"  height="20" width="20"></a></td>
 							  <td align="center"><a target="_blank" href="print-invoice/ticket-print.php?cid=<?php echo codificar($row['cid']); ?>">
-							  <img src="img/ticket.png"  height="20" width="20"></a></td>							  
+							  <img src="img/ticket.png"  height="20" width="20"></a></td>
 							  <td align="center"><a  href="barcode/courier/html/BCGcode39.php?tracking=<?php echo $row['tracking']; ?>" target="_blank">
 							  <img src="img/barcode.png"  height="20" width="20"></a></td>
-							 
+
 							  <td class="gentxt" align="center">
 							  <a href="settings/add_courier/status_delivered.php?cid=<?php echo $row['cid']; ?>"
 							  onclick="return confirm('<?php echo $DELIVERY; ?>')">
-								<img src="img/delivery.png"  height="20" width="20"></a></td>						  
+								<img src="img/delivery.png"  height="20" width="20"></a></td>
 							  <td><font color="#000"><?php echo $row['tracking']; ?></font></td>
 							  <td><strong><?php echo $_SESSION['ge_curr']; ?><?php echo $s.formato($row['shipping_subtotal']); ?></strong></td>
 							  <td align="center"><span class="label <?php echo $row['payment']; ?> label-large"><?php echo $row['payment']; ?></span>&nbsp;
-							  <span style="background: #<?php echo $row['color']; ?>;"  class="label label-large" ><?php echo $row['paymode']; ?></span></td> 
+							  <span style="background: #<?php echo $row['color']; ?>;"  class="label label-large" ><?php echo $row['paymode']; ?></span></td>
 							  <td><?php echo $row['locker']; ?></td>
 							  <td><?php echo $row['ship_name']; ?></td>
 							  <td><?php echo $row['rev_name']; ?></td>
 							  <td><?php echo $row['pick_date']; ?></td>
 							  <td><span style="background: #<?php echo $row['color']; ?>;"  class="label label-large" ><?php echo $row['status']; ?></span>
-							  </td>           
+							  </td>
 						  </tr>
 							<?php } ?>
 						</tbody>
 					</table>
 				  </div>
-				  
+
 				</div>
 				<div class="col wrapper-lg w-lg light dk r-r">
 				  <h4><i class="fa fa-spinner"></i>&nbsp;&nbsp;<?php echo $enviosrecientes; ?></a></h4>
@@ -217,19 +217,19 @@ isUser();
 								</thead>
 								<tbody>
 									<?php
-										$result1 = mysql_query("SELECT c.cid, c.tracking, c.status, s.color,s.servicemode, c.book_date FROM courier c, service_mode s 
+										$result1 = mysql_query("SELECT c.cid, c.tracking, c.status, s.color,s.servicemode, c.book_date FROM courier c, service_mode s
 										WHERE  LEFT(book_date, 10) = CURDATE() AND s.servicemode = c.status");
-										while($row = mysql_fetch_array($result1)) {					
-									?> 
+										while($row = mysql_fetch_array($result1)) {
+									?>
 									<tr>
 										<td><font color="#000"><?php echo $row['tracking']; ?></font></td>
 										<td><?php echo $row['book_date']; ?></td>
-										 <td><span style="background: #<?php echo $row['color']; ?>;"  class="label label-large" ><?php echo $row['status']; ?></span>    
+										 <td><span style="background: #<?php echo $row['color']; ?>;"  class="label label-large" ><?php echo $row['status']; ?></span>
 									</tr>
 									<?php } ?>
 								</tbody>
 							</table>
-					</div> 
+					</div>
 				</div>
 			  </div>
 			  <!-- / service -->
@@ -249,7 +249,7 @@ isUser();
 					<div class="table-responsive">
 						<table ui-jq="dataTable" class="table table-striped b-t b-b">
 								<thead>
-								  <tr> 						  
+								  <tr>
 									  <?php if(isset($_SESSION['user_type']) && $_SESSION['user_type'] == 'Administrator') { ?>
 									  <th>&nbsp;</th>
 									  <?php } ?>
@@ -268,29 +268,29 @@ isUser();
 									  <th><?php echo $fecha; ?></th>
 									  <th>&nbsp;</th>
 								  </tr>
-								</thead>	
-								
+								</thead>
+
 								<tbody>
 									<tr>
 										<?php
-											$result3 = mysql_query("SELECT c.cid, c.cons_no,c.ship_name,c.locker, c.ciudad, c.city1, c.deliverydate, c.paymode, c.rev_name, c.payment, 
-											c.shipping_subtotal, s.color, c.status FROM courier_online c, service_mode s 
+											$result3 = mysql_query("SELECT c.cid, c.cons_no,c.ship_name,c.locker, c.ciudad, c.city1, c.deliverydate, c.paymode, c.rev_name, c.payment,
+											c.shipping_subtotal, s.color, c.status FROM courier_online c, service_mode s
 											WHERE s.servicemode = c.status AND c.status != 'delivered' ORDER BY cid DESC");
-																	
+
 											while($row = mysql_fetch_array($result3)) {
 										?>
-											<?php if(isset($_SESSION['user_type']) && $_SESSION['user_type'] == 'Administrator') { ?>															  
+											<?php if(isset($_SESSION['user_type']) && $_SESSION['user_type'] == 'Administrator') { ?>
 											 <td align="center">
-												<a href="#" onclick="del_list_online(<?php echo $row['cid']; ?>);"><img src="img/delete.png"  height="20" width="18"></a></td>	
-											  <?php } ?>							  																				
+												<a href="#" onclick="del_list_online(<?php echo $row['cid']; ?>);"><img src="img/delete.png"  height="20" width="18"></a></td>
+											  <?php } ?>
 											  <td align="center">
 												  <a href="edit-courier-customer.php?cid=<?php echo codificar($row['cid']); ?>">
 												  <img src="img/edit.png"  height="20" width="18"></a>
-											  </td>						
+											  </td>
 											  <td align="center">
 												<a data-target="#con-close-modal-status-online<?php echo $row['cid']; ?>" data-toggle="modal">
 												<img src="img/update-status.png"  height="20" width="20"></a>
-											  </td>							  
+											  </td>
 											  <td align="center">
 												  <a target="_blank" href="print-invoice/invoice-print-online.php?cid=<?php echo codificar($row['cid']); ?>">
 												  <img src="img/print.png"  height="20" width="20"></a>
@@ -298,35 +298,35 @@ isUser();
 											  <td align="center">
 												  <a  href="barcode/courier-online/html/BCGcode39.php?cons_no=<?php echo $row['cons_no']; ?>" target="_blank">
 												  <img src="img/barcode.png"  height="20" width="20"></a>
-											  </td>								  						  
+											  </td>
 											  <td align="center">
 												  <a data-target="#con-close-modal-online<?php echo $row['cid']; ?>" data-toggle="modal">
 												  <img src="img/delivery.png"  height="20" width="20"></a>
-											  </td>												  
+											  </td>
 											  <td><font color="#000"><?php echo $row['cons_no']; ?></td>
-											  <td><strong><?php echo $_SESSION['ge_curr']; ?><?php echo $s.formato($row['shipping_subtotal']); ?></strong></td>															  
-											  <td align="center"><span class="label <?php echo $row['payment']; ?> label-large"><?php echo $row['payment']; ?></span>&nbsp;<span class="label <?php echo $row['paymode']; ?> label-large"><?php echo $row['paymode']; ?></span></td>															  
+											  <td><strong><?php echo $_SESSION['ge_curr']; ?><?php echo $s.formato($row['shipping_subtotal']); ?></strong></td>
+											  <td align="center"><span class="label <?php echo $row['payment']; ?> label-large"><?php echo $row['payment']; ?></span>&nbsp;<span class="label <?php echo $row['paymode']; ?> label-large"><?php echo $row['paymode']; ?></span></td>
 											  <td><?php echo $row['ship_name']; ?>|<?php echo $row['locker']; ?></td>
 											  <td><?php echo $row['ciudad']; ?></td>
 											  <td><?php echo $row['rev_name']; ?></td>
 											  <td><?php echo $row['city1']; ?></td>
 											  <td><?php echo $row['deliverydate']; ?></td>
-											  <td><span style="background: #<?php echo $row['color']; ?>;"  class="label label-large" ><?php echo $row['status']; ?></span>         
+											  <td><span style="background: #<?php echo $row['color']; ?>;"  class="label label-large" ><?php echo $row['status']; ?></span>
 									  </tr>
 										<?php } ?>
-								</tbody>												
+								</tbody>
 						</table>
 					</div>
 				  </div>
-				  <div class="col-md-2">            
+				  <div class="col-md-2">
 					<div class="row row-sm">
 						<div class="table-responsive">
 						  <div class="col-xs-12 text-center">
-							<br>				  
+							<br>
 							<div id="container" style="min-width: 300px; height: 300px; margin: 0 auto"></div>
 						  </div>
 						</div>
-					</div>	
+					</div>
 				  </div>
 
 				</div>
@@ -338,9 +338,9 @@ isUser();
 		</div>
 	</div>
 </div>
-	<!-- /content -->  
+	<!-- /content -->
 	 <!-- Modal Update Courier -->
-		
+
 	<?php include("modal-status/modal-update-courier.php"); ?>
 
 	<!-- / Modal Update Courier -->
@@ -355,7 +355,7 @@ isUser();
 
 	<?php include("modal-status/modal-update-courier-status-online.php"); ?>
 
-	<!-- / Modal Update Courier Status Online --> 
+	<!-- / Modal Update Courier Status Online -->
 
 	<?php
 	include("footer.php");
@@ -373,7 +373,7 @@ isUser();
 	<script src="js/delivery.js"></script>
 	<script src="http://code.highcharts.com/highcharts.js"></script>
 	<script src="http://code.highcharts.com/modules/exporting.js"></script>
-	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> 
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
 	<script type="text/javascript" charset="utf8" src="js/jquery.dataTables.js"></script>
 		<script type="text/javascript">
@@ -384,21 +384,21 @@ isUser();
 			var data = google.visualization.arrayToDataTable([
 			  ['Mes', 'Courier', 'Courier Online'],
 			  <?php
-				for($x=1;$x<=12;$x=$x+1){	
+				for($x=1;$x<=12;$x=$x+1){
 			  ?>
-			  ['<?php echo $meses[$x]; ?>',  <?php echo $dinero[$x] ?>, <?php echo $dineros[$x] ?>],		  
-			  <?php } ?>		  
-			  
+			  ['<?php echo $meses[$x]; ?>',  <?php echo $dinero[$x] ?>, <?php echo $dineros[$x] ?>],
+			  <?php } ?>
+
 			]);
 
 			var options = {
-				
+
 			  colors: ['#23B7E5','#27C24C'],
 					series: { shadowSize: 4 },
-					xaxis:{ 
+					xaxis:{
 					  font: { color: '#ccc' },
 					  position: 'bottom',
-					  
+
 					},
 					title: '',
 					curveType: 'function',
@@ -455,16 +455,16 @@ isUser();
 	<script type="text/javascript">
 		function del_list_admin(cid) {
 			if (window.confirm('<?php echo $DELETEADMIN; ?>')) {
-				window.location = "deletes/delete_list_admin.php?action=del&cid="+cid; 
+				window.location = "deletes/delete_list_admin.php?action=del&cid="+cid;
 			}
 		}
 	</script>
 	<script type="text/javascript">
 		function del_list_online(cid) {
 			if (window.confirm("<?php echo $DELETEONLINE; ?>")) {
-				window.location = "deletes/delete_list_online.php?action=del&cid="+cid; 
+				window.location = "deletes/delete_list_online.php?action=del&cid="+cid;
 			}
 		}
-	</script>	
+	</script>
 </body>
 </html>

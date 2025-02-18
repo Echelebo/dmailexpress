@@ -38,13 +38,10 @@
 		// defino reglas y filtros
 		$validator->filter_rules( array(
 			'Shippername'       	=> 'trim|sanitize_string',
-			'Shipperphone'       	=> 'trim|sanitize_numbers',
 			'Shipperaddress'    	=> 'trim|sanitize_string',
 			'Shipperemail'	  		=> 'trim|sanitize_email',
 			'address'     			=> 'trim|sanitize_string',
 			'Receivername'     		=> 'trim|sanitize_string',
-			'Receiverphone'    		=> 'trim|sanitize_numbers',
-			'telefono1'       		=> 'trim|sanitize_numbers',
 			'Receiveraddress'       => 'trim|sanitize_string',
 			'Receiveremail'     	=> 'trim|sanitize_email',
 			'Weight'				=> 'trim|sanitize_string',
@@ -60,12 +57,9 @@
 
 			$validator->validation_rules( array(
 			'Shippername'       	=> 'required',
-			'Shipperphone'       	=> 'required',
 			'Shipperaddress'    	=> 'required',
 			'Shipperemail'     		=> 'required|valid_email',
 			'Receivername'     		=> 'required',
-			'Receiverphone'    		=> 'required',
-			'telefono1'       		=> 'required',
 			'Receiveraddress'       => 'required',
 			'Receiveremail'			=> 'required|valid_email',
 			'Weight'				=> 'required',
@@ -88,36 +82,22 @@
 		} else {
 
 		$Shippername 		= $_POST['Shippername'];
-		$Shipperphone 		= $_POST['Shipperphone'];
 		$Shipperaddress		= $_POST['Shipperaddress'];
-		$Shippercc 			= $_POST['Shippercc'];
 		$Shipperlocker 		= $_POST['Shipperlocker'];
 		$Shipperemail 		= $_POST['Shipperemail'];
 		$Receivername 		= $_POST['Receivername'];
-		$Receiverphone 		= $_POST['Receiverphone'];
-		$telefono1 			= $_POST['telefono1'];
 		$Receiveraddress 	= $_POST['Receiveraddress'];
-		$Receivercc_r 		= $_POST['Receivercc_r'];
 		$Receiveremail 		= $_POST['Receiveremail'];
 		$tracking 			= $_POST['tracking'];
 		$ConsignmentNo 		= $_POST['ConsignmentNo'];
 		$letra 				= $_POST['letra'];
 		$Shiptype 			= $_POST['Shiptype'];
 		$Weight 			= $_POST['Weight'];
-		$kiloadicional 		= $_POST['kiloadicional'];
-		$variable 			= $_POST['variable'];
 		$shipping_subtotal 	= $_POST['shipping_subtotal'];
 		$pesoreal 			= $_POST['pesoreal'];
 		$Invoiceno 			= $_POST['Invoiceno'];
 		$Qnty 				= $_POST['Qnty'];
-		$altura 			= $_POST['altura'];
-		$ancho 				= $_POST['ancho'];
-		$longitud 			= $_POST['longitud'];
-		$totalpeso 			= $_POST['totalpeso'];
 		$bookingmode 		= $_POST['bookingmode'];
-		$Totalfreight 		= $_POST['Totalfreight'];
-		$Totaldeclarate 	= $_POST['Totaldeclarate'];
-		$Totaldeclarado 	= $_POST['Totaldeclarado'];
 		$Mode 				= $_POST['Mode'];
 		$Packupdate 		= $_POST['Packupdate'];
 		$Schedule 			= $_POST['Schedule'];
@@ -125,12 +105,10 @@
 		$iso 				= $_POST['iso'];
 		$state 				= $_POST['state'];
 		$ciudad 			= $_POST['ciudad'];
-		$zipcode 			= $_POST['zipcode'];
 		$paisdestino 		=  $_POST['paisdestino'];
 		$iso1 				= $_POST['iso1'];
 		$state1 			= $_POST['state1'];
 		$city1 				= $_POST['city1'];
-		$zipcode1 			= $_POST['zipcode1'];
 		$status 			= $_POST['status'];
 		$Comments 			= $_POST['Comments'];
 		$officename 		= $_POST['officename'];
@@ -157,14 +135,9 @@
 				}
 			}
 
-		$sql = "INSERT INTO courier (tracking,cons_no, letra,ship_name, phone, s_add, cc, locker, correo, rev_name, r_phone, telefono1, r_add, cc_r, email, type, weight, variable,
-		kiloadicional, shipping_subtotal, altura, ancho, longitud, totalpeso, invice_no, qty, book_mode, freight, declarate, declarado, mode, pick_date, schedule, pick_time, pick_time2, iso,
-		state, ciudad, zipcode, paisdestino, iso1, state1, city1, zipcode1, status, comments, officename, status_delivered, user, book_date, pesoreal)
-		VALUES('$cons_no','$cons_no', '$pre', '$Shippername','$Shipperphone', '$Shipperaddress', '$Shippercc', '$Shipperlocker', '$Shipperemail', '$Receivername',
-		'$Receiverphone', '$telefono1', '$Receiveraddress', '$Receivercc_r', '$Receiveremail', '$Shiptype',$Weight , '$variable', '$kiloadicional', '$shipping_subtotal',
-		'$altura', '$ancho', '$longitud', '$totalpeso', '$Invoiceno', $Qnty, '$bookingmode', '$Totalfreight',  '$Totaldeclarate', '$Totaldeclarado', '$Mode', '$Packupdate',
-		'$Schedule', '$Pickuptime', '$Pickuptime', '$iso', '$state', '$ciudad', '$zipcode', '$paisdestino', '$iso1', '$state1', '$city1', '$zipcode1', '$status', '$Comments', '$officename',
-		'$status_delivered', '$user', curdate(), '$pesoreal')";
+		$sql = "INSERT INTO courier (tracking,cons_no, letra,ship_name, s_add, locker, correo, rev_name, r_add, email, type, weight, shipping_subtotal, invice_no, qty, book_mode, declarado, mode, pick_date, schedule, pick_time, pick_time2, iso,
+		state, ciudad, paisdestino, iso1, state1, city1, status, comments, officename, status_delivered, user, book_date, pesoreal)
+		VALUES('$cons_no','$cons_no', '$pre', '$Shippername', '$Shipperaddress', '$Shipperlocker', '$Shipperemail', '$Receivername', '$Receiveraddress', '$Receiveremail', '$Shiptype',$Weight , '$shipping_subtotal', '$Invoiceno', $Qnty, '$bookingmode', '$Mode', '$Packupdate', '$Schedule', '$Pickuptime', '$Pickuptime', '$iso', '$state', '$ciudad', '$paisdestino', '$iso1', '$state1', '$city1', '$status', '$Comments', '$officename', '$status_delivered', '$user', curdate(), '$pesoreal')";
 			//echo $sql;
 		dbQuery($sql);
 
@@ -214,7 +187,7 @@
 
 		// Step 2: Use sendText( $to, $from, $message ) method to send a message.
 
-		$info = $nexmo_sms->sendText($_POST['Shipperphone'], $_POST['Shippername'], ''.$Shippername.', '.$apia.' '.$Comments.'. '.$apib.' '.$sms.'. '.$apic.' '.$shipping_subtotal.'');
+		//$info = $nexmo_sms->sendText($_POST['Shipperphone'], $_POST['Shippername'], ''.$Shippername.', '.$apia.' '.$Comments.'. '.$apib.' '.$sms.'. '.$apic.' '.$shipping_subtotal.'');
 		// Step 3: Display an overview of the message
 
 		$result131 =  mysql_query("SELECT * FROM company");
@@ -310,9 +283,9 @@
 																			<div style='color:#404040;font-size:16px;line-height:22px;font-weight:lighter;padding:0;margin:0'><strong>$email1:</strong> <strong>$Receiveremail</strong></div>
 																			<div style='color:#404040;font-size:16px;line-height:22px;font-weight:lighter;padding:0;margin:0'><strong>$destinoe:</strong> <strong>$paisdestino</strong></div>
 																			<div style='color:#404040;font-size:16px;line-height:22px;font-weight:lighter;padding:0;margin:0'><strong>$direccion:</strong> <strong>$Receiveraddress</strong></div>
-																			<div style='color:#404040;font-size:16px;line-height:22px;font-weight:lighter;padding:0;margin:0'><strong>$fechadelenvio:</strong> <strong>$Schedule</strong></div>
+																			<div style='color:#404040;font-size:16px;line-height:22px;font-weight:lighter;padding:0;margin:0'><strong>Expected Delivery Date:</strong> <strong>$Schedule</strong></div>
 																			<div style='line-height:5px;padding:0;margin:0'>&nbsp;</div>
-																			<div style='color:#404040;font-size:16px;line-height:22px;font-weight:lighter;padding:0;margin:0'><strong>$DetallesdelEnvio:</strong> <strong>$Comments</strong></div>
+																			<div style='color:#404040;font-size:16px;line-height:22px;font-weight:lighter;padding:0;margin:0'><strong>Package name:</strong> <strong>$Comments</strong></div>
 																		</td>
 																		<td width='30'></td>
 																	</tr>

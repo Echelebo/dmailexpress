@@ -18,7 +18,7 @@
 // * here- http://codecanyon.net/licenses/standard                         *
 // *                                                                       *
 // *************************************************************************
- 
+
 error_reporting(E_ERROR | E_WARNING | E_PARSE);
 session_start();
 require_once('../database.php');
@@ -26,13 +26,13 @@ require_once('../funciones.php');
 require_once('../requirelanguage.php');
 require("barcode/barcode.class.online.php");
 	$bar	= new BARCODE();
-	
+
 $cid= $_GET['cid'];
 $cid = decodificar($cid);
 $sql = "SELECT *
 		FROM courier_online
-		WHERE cid = $cid";	
-$result = dbQuery($sql);		
+		WHERE cid = $cid";
+$result = dbQuery($sql);
 while($row = dbFetchAssoc($result)) {
 extract($row);
 }
@@ -45,17 +45,17 @@ $fecha=date('Y-m-d');
   <head>
 
     <title><?php echo $_SESSION['ge_cname']; ?> | <?php echo $cons_no; ?></title>
-	
+
 	<!-- Define Charset -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	
+
 	<!-- Page Description and Author -->
 	<meta name="description" content="<?php echo $_SESSION['ge_description']; ?>"/>
 	<meta name="keywords" content="<?php echo $_SESSION['ge_keywords']; ?>" />
-    <meta name="author" content="Jaomweb">	
+    <meta name="author" content="Jaomweb">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-	
+
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.4 -->
@@ -106,7 +106,7 @@ $fecha=date('Y-m-d');
             <?php echo $DESTINA; ?>
             <address>
               <h4><strong><?php echo $rev_name; ?></strong></h4><br>
-              
+
               <b><?php echo $telefono; ?>:</b> <?php echo $r_phone; ?><br/>
 			  <b><?php echo $direccion; ?>:</b> <?php echo $r_add; ?><br/>
               <b><?php echo $paisdestino1; ?>:</b> <?php echo $paisdestino; ?> | <?php echo $city1; ?>
@@ -117,17 +117,17 @@ $fecha=date('Y-m-d');
 				<p style="text-align: center;" >
 					<center  width="100%">
 						<div class="output" align="center">
-							<section class="output">    
+							<section class="output">
 								<?php
 									$cid= $_GET['cid'];
 									$cid = decodificar($cid);
 									$cons_no= (int)$_GET['cons_no'];
 									$rs = mysql_query("SELECT cid,cons_no FROM courier_online WHERE cid=$cid");
 									if($dato=mysql_fetch_array($rs)) {
-										
+
 									$numbrr = $dato['cons_no'];
 									$link = $bar->BarCode_link("CODE39", "$numbrr");
-									
+
 									}
 								?>
 								<img src='<?php echo $link; ?>' />
@@ -140,7 +140,7 @@ $fecha=date('Y-m-d');
             <b><?php echo $ordenid; ?>:</b>&nbsp;&nbsp;<?php echo $cid; ?><br/>
             <b><?php echo $fechavencimientopago; ?>:</b>&nbsp;<?php echo $date; ?><br/>
 			<b><?php echo $metodopago; ?>:</b> <small class="label label-danger"><i class="fa fa-money"></i>&nbsp;&nbsp;<?php echo $book_mode; ?></small><br/>
-          </div><!-- /.col -->		 
+          </div><!-- /.col -->
         </div><!-- /.row -->
 
         <!-- Table row -->
@@ -163,7 +163,7 @@ $fecha=date('Y-m-d');
                   <td><small class="label label-success"><?php echo $status; ?></small></td>
                   <td><?php echo $note; ?></td>
                   <td><?php echo $_SESSION['ge_curr']; ?>&nbsp;<?php echo $shipping_subtotal; ?></td>
-                </tr>               
+                </tr>
               </tbody>
             </table>
           </div><!-- /.col -->
@@ -174,7 +174,7 @@ $fecha=date('Y-m-d');
           <!-- accepted payments column -->
           <div class="col-xs-6">
             <p class="lead"><?php echo $metodospagos; ?>:</p>
-            <img src="../img/credit/securepayment.png" alt="Methods payments" />           
+            <img src="../img/credit/securepayment.png" alt="Methods payments" />
             <p class="text-muted well well-sm no-shadow" style="margin-top: 10px;">
               <?php echo $sucomodidad; ?>
             </p>
