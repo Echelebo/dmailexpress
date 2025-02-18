@@ -26,7 +26,7 @@ require_once('dashboard/funciones.php');
 
 $tracking= $_POST['shipping'];
 
-$sql = "SELECT c.cid, c.tracking, c.cons_no, c.letra, c.book_mode, c.schedule, c.paisdestino, c.pick_time, c.pick_time2, c.invice_no, c.mode, c.type, c.weight, c.weightx, c.comments, c.ship_name, c.s_add, c.rev_name, c.r_add, c.pick_date, c.user, s.color, c.status FROM courier c, service_mode s WHERE s.servicemode = c.status AND c.tracking = '$tracking'";
+$sql = "SELECT c.cid, c.tracking, c.cons_no, c.letra, c.book_mode, c.schedule, c.paisdestino, c.pick_time, c.pick_time2, c.invice_no, c.mode, c.type, c.weight, c.weightx, c.qty, c.comments, c.ship_name, c.s_add, c.rev_name, c.r_add, c.pick_date, c.user, s.color, c.status FROM courier c, service_mode s WHERE s.servicemode = c.status AND c.tracking = '$tracking'";
 
 $result = dbQuery($sql);
 $no = dbNumRows($result);
