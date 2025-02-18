@@ -365,7 +365,7 @@ isUser();
 				  ?>
                   <b class="badge bg-success pull-right"><?php echo $row2; ?></b>
                   <i class="glyphicon glyphicon-map-marker"></i>
-                  <span>Shipper References</span>
+                  <span>REFERENCES</span>
                 </a>
 
               </li>
