@@ -50,7 +50,7 @@
 	}
 
 	$sql = "INSERT INTO courier_track (cid, cons_no, letra, pick_time, status, comments, bk_time, ship_name, correo, email, user)
-			VALUES ($cid, '$cons_no', '$pre', '$pick_time | $citaddress', '$status', '$comments', $bk_time, '$ship_name', '$correo', '$email', '$user')";
+			VALUES ($cid, '$cons_no', '$pre', '$pick_time | $citaddress', '$status', '$comments', '$bk_time', '$ship_name', '$correo', '$email', '$user')";
 	dbQuery($sql);
 
 	$sql_1 = "UPDATE courier SET status='$status', pick_time2 = '$pick_time' WHERE cid = $cid AND cons_no = '$cons_no'";
