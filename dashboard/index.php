@@ -118,12 +118,11 @@ isUser();
 				</div>
 			  </div>
 			</div>
-			<!-- / main header -->
-			<div class="wrapper-md" ng-controller="FlotChartDemoCtrl">
+
 
 			<!-- stats -->
 
-			<?php include("header-stats.php"); ?>
+
 
 			<!-- / stats -->
 
@@ -204,33 +203,7 @@ isUser();
 				  </div>
 
 				</div>
-				<div class="col wrapper-lg w-lg light dk r-r">
-				  <h4><i class="fa fa-spinner"></i>&nbsp;&nbsp;<?php echo $enviosrecientes; ?></a></h4>
-					<div class="table-responsive">
-							<table ui-jq="dataTable" class="table table-striped b-t b-b">
-								<thead>
-									<tr>
-										<th><?php echo $tracking; ?></th>
-										<th><?php echo $fechainicio; ?></th>
-										<th><?php echo $estado; ?></th>
-									</tr>
-								</thead>
-								<tbody>
-									<?php
-										$result1 = mysql_query("SELECT c.cid, c.tracking, c.status, s.color,s.servicemode, c.book_date FROM courier c, service_mode s
-										WHERE  LEFT(book_date, 10) = CURDATE() AND s.servicemode = c.status");
-										while($row = mysql_fetch_array($result1)) {
-									?>
-									<tr>
-										<td><font color="#000"><?php echo $row['tracking']; ?></font></td>
-										<td><?php echo $row['book_date']; ?></td>
-										 <td><span style="background: #<?php echo $row['color']; ?>;"  class="label label-large" ><?php echo $row['status']; ?></span>
-									</tr>
-									<?php } ?>
-								</tbody>
-							</table>
-					</div>
-				</div>
+
 			  </div>
 			  <!-- / service -->
 				<?php
@@ -240,97 +213,7 @@ isUser();
 					$numero2 = mysql_num_rows($result); // get the number of rows
 				?>
 			  <!-- tasks -->
-			  <div class="panel wrapper">
-				<div class="row">
-				  <div class="col-md-10 b-r b-light no-border-xs">
-					<a href class="text-muted pull-right text-lg"><i class="icon-arrow-right"></i></a>
-					<h4><i class="icon-envelope-open"></i>&nbsp; <strong><span class="text-danger text-uppercase m-b-15 m-t-10"><?php echo $numero2; ?></span></strong>&nbsp;<?php echo $LISTAENVIORESERVAONLINE; ?></a></h4>
-					<br>
-					<div class="table-responsive">
-						<table ui-jq="dataTable" class="table table-striped b-t b-b">
-								<thead>
-								  <tr>
-									  <?php if(isset($_SESSION['user_type']) && $_SESSION['user_type'] == 'Administrator') { ?>
-									  <th>&nbsp;</th>
-									  <?php } ?>
-									  <th>&nbsp;</th>
-									  <th>&nbsp;</th>
-									  <th>&nbsp;</th>
-									  <th>&nbsp;</th>
-									  <th><?php echo $entregar; ?></th>
-									  <th><?php echo $numerotracking; ?></th>
-									  <th><?php echo $apagar; ?></th>
-									  <th><?php echo $pagos; ?></th>
-									  <th><?php echo $cliente; ?></th>
-									  <th><?php echo $de; ?></th>
-									  <th><?php echo $destina; ?></th>
-									  <th><?php echo $a; ?></th>
-									  <th><?php echo $fecha; ?></th>
-									  <th>&nbsp;</th>
-								  </tr>
-								</thead>
 
-								<tbody>
-									<tr>
-										<?php
-											$result3 = mysql_query("SELECT c.cid, c.cons_no,c.ship_name,c.locker, c.ciudad, c.city1, c.deliverydate, c.paymode, c.rev_name, c.payment,
-											c.shipping_subtotal, s.color, c.status FROM courier_online c, service_mode s
-											WHERE s.servicemode = c.status AND c.status != 'delivered' ORDER BY cid DESC");
-
-											while($row = mysql_fetch_array($result3)) {
-										?>
-											<?php if(isset($_SESSION['user_type']) && $_SESSION['user_type'] == 'Administrator') { ?>
-											 <td align="center">
-												<a href="#" onclick="del_list_online(<?php echo $row['cid']; ?>);"><img src="img/delete.png"  height="20" width="18"></a></td>
-											  <?php } ?>
-											  <td align="center">
-												  <a href="edit-courier-customer.php?cid=<?php echo codificar($row['cid']); ?>">
-												  <img src="img/edit.png"  height="20" width="18"></a>
-											  </td>
-											  <td align="center">
-												<a data-target="#con-close-modal-status-online<?php echo $row['cid']; ?>" data-toggle="modal">
-												<img src="img/update-status.png"  height="20" width="20"></a>
-											  </td>
-											  <td align="center">
-												  <a target="_blank" href="print-invoice/invoice-print-online.php?cid=<?php echo codificar($row['cid']); ?>">
-												  <img src="img/print.png"  height="20" width="20"></a>
-											  </td>
-											  <td align="center">
-												  <a  href="barcode/courier-online/html/BCGcode39.php?cons_no=<?php echo $row['cons_no']; ?>" target="_blank">
-												  <img src="img/barcode.png"  height="20" width="20"></a>
-											  </td>
-											  <td align="center">
-												  <a data-target="#con-close-modal-online<?php echo $row['cid']; ?>" data-toggle="modal">
-												  <img src="img/delivery.png"  height="20" width="20"></a>
-											  </td>
-											  <td><font color="#000"><?php echo $row['cons_no']; ?></td>
-											  <td><strong><?php echo $_SESSION['ge_curr']; ?><?php echo $s.formato($row['shipping_subtotal']); ?></strong></td>
-											  <td align="center"><span class="label <?php echo $row['payment']; ?> label-large"><?php echo $row['payment']; ?></span>&nbsp;<span class="label <?php echo $row['paymode']; ?> label-large"><?php echo $row['paymode']; ?></span></td>
-											  <td><?php echo $row['ship_name']; ?>|<?php echo $row['locker']; ?></td>
-											  <td><?php echo $row['ciudad']; ?></td>
-											  <td><?php echo $row['rev_name']; ?></td>
-											  <td><?php echo $row['city1']; ?></td>
-											  <td><?php echo $row['deliverydate']; ?></td>
-											  <td><span style="background: #<?php echo $row['color']; ?>;"  class="label label-large" ><?php echo $row['status']; ?></span>
-									  </tr>
-										<?php } ?>
-								</tbody>
-						</table>
-					</div>
-				  </div>
-				  <div class="col-md-2">
-					<div class="row row-sm">
-						<div class="table-responsive">
-						  <div class="col-xs-12 text-center">
-							<br>
-							<div id="container" style="min-width: 300px; height: 300px; margin: 0 auto"></div>
-						  </div>
-						</div>
-					</div>
-				  </div>
-
-				</div>
-			  </div>
 			  <!-- / tasks -->
 			</div>
 		  </div>
