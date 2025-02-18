@@ -81,41 +81,42 @@ extract($data);
         <div class="col-sm-12 col-md-12 col-lg-12">
         <div class="text-center">
 
-            <h5 class="card-heading-x"><?php echo $tracking; ?></h5><br />
+            <h5 class="card-heading-x"><?php echo $tracking; ?></h5>
 </div>
 
-			<div class="col-sm-6 col-md-6 col-lg-6">
-               <div class="text-left">Ship Date <br /><strong><?php echo $pick_date; ?></strong>
+			<div class="col-sm-5 col-md-5 col-lg-5">
+               <div class="text-left" style="margin-top: -15px">Ship Date <br /><strong><?php echo $pick_date; ?></strong>
             </div>
             </div>
-            <div class="col-sm-6 col-md-6 col-lg-6">
+            <div class="col-sm-5 col-md-5 col-lg-5">
             <div class="text-left"> Actual Delivery <br /><strong><?php echo strtoupper($status); ?></strong>
             </div>
             </div>
         </div>
 
 
-        <div class="col-sm-12 col-md-12 col-lg-12 mt-4">
-
-            <div class="text-center">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+<hr>
+            <div class="text-center mt-4">
 
 <h5 class="card-heading-x">Arrived Port</h5><br />
 </div>
 
-			<div class="col-sm-6 col-md-6 col-lg-6">
-            <div class="text-left"><?php echo strtoupper($s_add); ?></div>
+			<div class="col-sm-5 col-md-5 col-lg-5">
+            <div class="text-left" style="margin-top: -15px"><?php echo strtoupper($s_add); ?></div>
         </div>
-            <div class="col-sm-6 col-md-6 col-lg-6">
+            <div class="col-sm-5 col-md-5 col-lg-5">
             <div class="text-left"><?php echo strtoupper($pick_time); ?></div>
         </div>
-        <div class="col-sm-6 col-md-6 col-lg-6">
+        <div class="col-sm-5 col-md-5 col-lg-5">
             <div class="text-left"><strong><?php echo $qty; ?> PIECE SHIPMENT</strong></div>
         </div>
 
 		</div>
 
-        <div class="col-sm-12 col-md-12 col-lg-12 mt-4">
-        <div class="text-center">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+        <hr>
+        <div class="text-center mt-4">
 
 <h5 class="card-heading-x">Sender/Receiver Details</h5>
 <a href="contact.php" style="color:dodgerblue;">Contact us now for more information on your package.</a><br />
@@ -128,9 +129,10 @@ extract($data);
 
 		</div>
         </div>
-		<hr />
+
 
 			<div class="col-sm-12 col-md-12 col-lg-12 mt-4">
+            <hr>
             <div class="text-center">
 
 <h5 class="card-heading-x">Shipping History</h5><br />
@@ -170,6 +172,7 @@ extract($data);
 
 
         <div class="col-sm-12 col-md-12 col-lg-12 mt-4">
+        <hr>
         <div class="text-center">
 
 <h5 class="card-heading-x">Shipment Facts</h5><br />
