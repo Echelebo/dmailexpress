@@ -319,7 +319,13 @@ isUser();
                       <span><?php echo $enviar; ?></span>
                     </a>
                   </li>
-
+				  <li>
+                    <a href="consolidate.php">
+                      <b class="label bg-success pull-right"></b>
+					  <i class="fa fa-share-square-o icon text-danger-lter"></i>
+                      <span><?php echo $consolidado; ?></span>
+                    </a>
+                  </li>
                 </ul>
               </li>
 			  <?php
@@ -334,8 +340,80 @@ isUser();
 				$result00 = mysql_query("SELECT * FROM upload_image_bank");
 					$transfer = dbNumRows($result00);
 				?>
-
-
+              <li>
+                <a href="online-bookings.php">
+                  <b class="badge bg-info pull-right"><?php echo $nobookings; ?></b>
+                  <i class="glyphicon glyphicon-envelope icon text-info-lter"></i>
+                  <span class="font-bold"><?php echo $reservaonline; ?></span>
+                </a>
+              </li>
+			  <li>
+                <a href="transfer-bank.php">
+                  <b class="badge bg-warning pull-right"><?php echo $transfer; ?></b>
+                  <i class="glyphicon glyphicon-sort icon text-warning-lter"></i>
+                  <span class="font-bold"><?php echo $transferencia; ?></span>
+                </a>
+              </li>
+			  <?php if(isset($_SESSION['user_type']) && $_SESSION['user_type'] == 'Administrator') { ?>
+			  <li>
+                <a href="accounting.php">
+                  <i class="glyphicon glyphicon-usd icon text-primary-lter"></i>
+                  <span class="font-bold"><?php echo $L_['accounting']; ?></span>
+                </a>
+              </li>
+			  <li>
+                <a href class="auto">
+                  <span class="pull-right text-muted">
+                    <i class="fa fa-fw fa-angle-right text"></i>
+                    <i class="fa fa-fw fa-angle-down text-active"></i>
+                  </span>
+                  <i class="fa fa-file-text icon text-default-dker"></i>
+                  <span class="font-bold"><?php echo $reportegeneral; ?></span>
+                </a>
+                <ul class="nav nav-sub dk">
+                  <li class="nav-sub-header">
+                    <a href>
+                      <span><?php echo $reportes; ?></span>
+                    </a>
+                  </li>
+				  <li>
+                    <a href="shipping-list.php">
+                      <span><?php echo $todoslosenvios; ?></span>
+                    </a>
+                  </li>
+				  <li>
+                    <a href="delivered-list.php">
+                      <span><?php echo $enviosentregados; ?></span>
+                    </a>
+                  </li>
+				  <li>
+                    <a href="delivered-list-online.php">
+                      <span><?php echo $enviosonline; ?></span>
+                    </a>
+                  </li>
+				  <li>
+                    <a href="list-of-shipping-paid.php">
+                      <span><?php echo $enviospefectivo; ?></span>
+                    </a>
+                  </li>
+				   <li>
+                    <a href="list-of-shipping-topay.php">
+                      <span><?php echo $enviospcredito; ?></span>
+                    </a>
+                  </li>
+				   <li>
+                    <a href="list-of-shipping-cash-on-delivery.php">
+                      <span><?php echo $enviospdebito; ?></span>
+                    </a>
+                  </li>
+				  <li>
+                    <a href="consolidate_report.php">
+                      <span><?php echo $consolidados; ?></span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+			  <?php } ?>
               <li class="line dk"></li>
 
               <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
@@ -365,33 +443,79 @@ isUser();
 				  ?>
                   <b class="badge bg-success pull-right"><?php echo $row2; ?></b>
                   <i class="glyphicon glyphicon-map-marker"></i>
-                  <span>REFERENCES</span>
+                  <span><?php echo $OFICINAS; ?></span>
                 </a>
 
               </li>
-
+			  <li>
+                <a href="add-new-users-admin.php">
+                  <span class="pull-right text-muted">
+                    <i class="fa fa-fw fa-angle-right text"></i>
+                    <i class="fa fa-fw fa-angle-down text-active"></i>
+                  </span>
+				  <i class="fa fa-user icon text-default-lter"></i>
+                  <span><?php echo $ADMINISTRADOR; ?></span>
+                </a>
+                <ul class="nav nav-sub dk">
+                  <li class="nav-sub-header">
+                    <a href>
+                      <span><?php echo $Usuario; ?></span>
+                    </a>
+                  </li>
+				  <li>
+                    <a href="add-new-users-admin.php">
+                      <b class="label bg-success pull-right"></b>
+					  <span class="pull-right text-muted">
+					  </span>
+					  <b class="badge bg-danger pull-right"><?php echo $row5; ?></b>
+                      <span><?php echo $Administrador; ?></span>
+                    </a>
+                  </li>
+				  <li>
+					<a href="add-new-users.php">
+					  <span class="pull-right text-muted">
+					  </span>
+					  <b class="badge bg-primary pull-right"><?php echo $row6; ?></b>
+					  <span><?php echo $EMPLEADOS; ?></span>
+					</a>
+				  </li>
+                </ul>
+              </li>
 			  <?php } ?>
-
+			  <li>
+                <a href="management-client.php">
+                  <span class="pull-right text-muted">
+                  </span>
+				  <b class="badge bg-info pull-right"><?php echo $row3; ?></b>
+				  <i class="fa fa-users icon text-default-lter"></i>
+                  <span><?php echo $CLIENTES; ?></span>
+                </a>
+              </li>
               <li>
                 <a href="typeshipments.php">
                   <i class="glyphicon glyphicon-gift"></i>
-                  <span>PACKAGING</span>
+                  <span><?php echo $tiposproductos; ?></span>
                 </a>
               </li>
               <li>
                 <a href="modebookings.php">
                   <i class="fa fa-truck icon text-default-lter"></i>
-                  <span>SERVICE MODE</span>
+                  <span><?php echo $tiposenvios; ?></span>
                 </a>
               </li>
 			  <?php if(isset($_SESSION['user_type']) && $_SESSION['user_type'] == 'Administrator') { ?>
 			  <li>
                 <a href="styles.php">
                   <i class="fa fa-magic icon text-default-lter"></i>
-                  <span>STATUS</span>
+                  <span><?php echo $STYLES; ?></span>
                 </a>
               </li>
-
+				<li>
+                <a href="shipping-charge.php">
+                  <i class="fa fa-money"></i>
+                  <span><?php echo $calculoenvios; ?></span>
+                </a>
+              </li>
 
               <li class="line dk hidden-folded"></li>
 
@@ -404,7 +528,12 @@ isUser();
                   <span><?php echo $configuracion; ?></span>
                 </a>
               </li>
-
+			  <li>
+                <a href="notificationsms.php">
+                  <i class="fa fa-comment-o icon text-danger-lter"></i>
+                  <span><?php echo $L_['notifications']; ?></span>
+                </a>
+              </li>
 			  <?php }  ?>
               <li>
                 <a href="library.php?action=logOut">

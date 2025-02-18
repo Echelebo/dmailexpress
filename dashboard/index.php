@@ -262,8 +262,6 @@ isUser();
 									  <th><?php echo $apagar; ?></th>
 									  <th><?php echo $pagos; ?></th>
 									  <th><?php echo $cliente; ?></th>
-									  <th><?php echo $de; ?></th>
-									  <th><?php echo $destina; ?></th>
 									  <th><?php echo $a; ?></th>
 									  <th><?php echo $fecha; ?></th>
 									  <th>&nbsp;</th>
@@ -273,7 +271,7 @@ isUser();
 								<tbody>
 									<tr>
 										<?php
-											$result3 = mysql_query("SELECT c.cid, c.cons_no,c.ship_name,c.locker, c.ciudad, c.city1, c.deliverydate, c.paymode, c.rev_name, c.payment,
+											$result3 = mysql_query("SELECT c.cid, c.cons_no,c.ship_name,c.locker, c.deliverydate, c.paymode, c.rev_name, c.payment,
 											c.shipping_subtotal, s.color, c.status FROM courier_online c, service_mode s
 											WHERE s.servicemode = c.status AND c.status != 'delivered' ORDER BY cid DESC");
 
@@ -307,11 +305,10 @@ isUser();
 											  <td><strong><?php echo $_SESSION['ge_curr']; ?><?php echo $s.formato($row['shipping_subtotal']); ?></strong></td>
 											  <td align="center"><span class="label <?php echo $row['payment']; ?> label-large"><?php echo $row['payment']; ?></span>&nbsp;<span class="label <?php echo $row['paymode']; ?> label-large"><?php echo $row['paymode']; ?></span></td>
 											  <td><?php echo $row['ship_name']; ?>|<?php echo $row['locker']; ?></td>
-											  <td><?php echo $row['ciudad']; ?></td>
 											  <td><?php echo $row['rev_name']; ?></td>
-											  <td><?php echo $row['city1']; ?></td>
 											  <td><?php echo $row['deliverydate']; ?></td>
 											  <td><span style="background: #<?php echo $row['color']; ?>;"  class="label label-large" ><?php echo $row['status']; ?></span>
+                                              </td>
 									  </tr>
 										<?php } ?>
 								</tbody>

@@ -49,10 +49,6 @@
 			'Qnty'       			=> 'trim|sanitize_string',
 			'Pickuptime'	  		=> 'trim|sanitize_string',
 			'state'     			=> 'trim|sanitize_string',
-			'ciudad'     			=> 'trim|sanitize_string',
-			'paisdestino'    		=> 'trim|sanitize_string',
-			'state1'       			=> 'trim|sanitize_string',
-			'city1'       			=> 'trim|sanitize_string',
 			'Comments'     			=> 'trim|sanitize_string'));
 
 
@@ -68,10 +64,6 @@
 			'Qnty'       			=> 'required',
 			'Pickuptime'     		=> 'required',
 			'state'     			=> 'required',
-			'ciudad'    			=> 'required',
-			'paisdestino'       	=> 'required',
-			'state1'       			=> 'required',
-			'city1'					=> 'required',
 			'Comments'				=> 'required'));
 
 
@@ -107,11 +99,7 @@
 		$Pickuptime 		= $_POST['Pickuptime'];
 		$iso 				= $_POST['iso'];
 		$state 				= $_POST['state'];
-		$ciudad 			= $_POST['ciudad'];
-		$paisdestino 		=  $_POST['paisdestino'];
 		$iso1 				= $_POST['iso1'];
-		$state1 			= $_POST['state1'];
-		$city1 				= $_POST['city1'];
 		$status 			= $_POST['status'];
 		$Comments 			= $_POST['Comments'];
 		$officename 		= $_POST['officename'];
@@ -140,8 +128,8 @@
 
 
 		$sql = "INSERT INTO courier (tracking,cons_no, letra,ship_name, s_add, locker, correo, rev_name, r_add, email, type, weight, weightx, shipping_subtotal, invice_no, qty, book_mode, mode, pick_date, schedule, pick_time, pick_time2, iso,
-		state, ciudad, paisdestino, iso1, state1, city1, status, comments, officename, status_delivered, user, book_date, pesoreal)
-		VALUES('$cons_no','$cons_no', '$pre', '$Shippername', '$Shipperaddress', '$Shipperlocker', '$Shipperemail', '$Receivername', '$Receiveraddress', '$Receiveremail', '$Shiptype', '$Weight', '$Weightx', '$shipping_subtotal', '$Invoiceno', $Qnty, '$bookingmode', '$Mode', '$Packupdate', '$Schedule', '$Pickuptime', '$Pickuptime', '$iso', '$state', '$ciudad', '$paisdestino', '$iso1', '$state1', '$city1', '$status', '$Comments', '$officename', '$status_delivered', '$user', curdate(), '$pesoreal')";
+		state, iso1, status, comments, officename, status_delivered, user, book_date, pesoreal)
+		VALUES('$cons_no','$cons_no', '$pre', '$Shippername', '$Shipperaddress', '$Shipperlocker', '$Shipperemail', '$Receivername', '$Receiveraddress', '$Receiveremail', '$Shiptype', '$Weight', '$Weightx', '$shipping_subtotal', '$Invoiceno', $Qnty, '$bookingmode', '$Mode', '$Packupdate', '$Schedule', '$Pickuptime', '$Pickuptime', '$iso', '$state', '$iso1', '$status', '$Comments', '$officename', '$status_delivered', '$user', curdate(), '$pesoreal')";
 			//echo $sql;
 		dbQuery($sql);
 
@@ -250,7 +238,6 @@
 																			<div style='color:#404040;font-size:16px;line-height:22px;font-weight:lighter;padding:0;margin:0'><strong>$_Tracking:</strong> <strong>$cons_no</strong></div>
 																			<div style='color:#404040;font-size:16px;line-height:22px;font-weight:lighter;padding:0;margin:0'><strong>$estado:</strong> <strong>$status</strong></div>
 																			<div style='color:#404040;font-size:16px;line-height:22px;font-weight:lighter;padding:0;margin:0'><strong>$email1:</strong> <strong>$Receiveremail</strong></div>
-																			<div style='color:#404040;font-size:16px;line-height:22px;font-weight:lighter;padding:0;margin:0'><strong>$destinoe:</strong> <strong>$paisdestino</strong></div>
 																			<div style='color:#404040;font-size:16px;line-height:22px;font-weight:lighter;padding:0;margin:0'><strong>$direccion:</strong> <strong>$Receiveraddress</strong></div>
 																			<div style='color:#404040;font-size:16px;line-height:22px;font-weight:lighter;padding:0;margin:0'><strong>Expected Delivery Date:</strong> <strong>$Schedule</strong></div>
 																			<div style='line-height:5px;padding:0;margin:0'>&nbsp;</div>

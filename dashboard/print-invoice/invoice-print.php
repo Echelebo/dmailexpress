@@ -97,7 +97,7 @@ extract($row);
               <h4><strong><?php echo $ship_name; ?></strong></h4><br>
               <b><?php echo $direccion; ?>:</b> <?php echo $s_add; ?><br/>
 			  <b><?php echo $paisorigen; ?>:</b> <?php echo $pick_time; ?><br/>
-			  <b><?php echo $ciudadorigen; ?>:</b> <?php echo $ciudad; ?><br/>
+
 
             </address>
           </div><!-- /.col -->
@@ -108,8 +108,8 @@ extract($row);
 
 			  <b><?php echo $direccion1; ?>:</b> <?php echo $r_add; ?><br/>
 			  <b><?php echo $email1; ?>:</b> <?php echo $email; ?><br/>
-              <b><?php echo $paisdestino1; ?>:</b> <?php echo $paisdestino; ?><br/>
-			  <b><?php echo $ciudaddestino; ?>:</b> <?php echo $city1; ?><br/>
+
+
 
             </address>
           </div><!-- /.col -->

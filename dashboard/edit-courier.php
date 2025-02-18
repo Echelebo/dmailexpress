@@ -141,10 +141,7 @@ include("header.php");
 																				<label class="text-info"><strong><?php echo $L_STATE; ?></strong></label>
 																					<input  type="text"  value="<?php echo $state; ?>" name="state"   class="form-control">
 																			</div>
-																			<div class="col-sm-3 form-group">
-																				<label class="text-info"><strong><?php echo $CIUDAD; ?></strong></label>
-																					<input  type="text"  value="<?php echo $ciudad; ?>" name="ciudad"   class="form-control">
-																			</div>
+
 																			<div class="col-sm-3 form-group">
 																				<label class="text-info"><strong><?php echo $CODIGO; ?></strong></label>
 																					<input name="iso" value="<?php echo $iso; ?>" class="form-control">
@@ -256,18 +253,8 @@ include("header.php");
 
 
 
-																			<div class="col-sm-3 form-group">
-																				<label class="text-info"><i class="fa fa-angle-double-right icon text-default-lter"></i>&nbsp;<strong><?php echo $PAISDESTINO; ?></strong></label>
-																					<input name="paisdestino" class="form-control" value="<?php echo $paisdestino; ?>" >
-																			</div>
-																			<div class="col-sm-3 form-group">
-																				<label class="text-info"><strong><?php echo $L_STATE; ?></strong></label>
-																					<input type="text" class="form-control" name="state1" value="<?php echo $state1; ?>" >
-																			</div>
-																			<div class="col-sm-3 form-group">
-																				<label class="text-info"><strong><?php echo $CIUDAD; ?></strong></label>
-																					<input type="text" class="form-control" name="city1" value="<?php echo $city1; ?>" >
-																			</div>
+
+
 																			<div class="col-sm-3 form-group">
 																				<label class="text-info"><strong><?php echo $CODIGO; ?></strong></label>
 																					<input name="iso1" class="form-control" value="<?php echo $iso1; ?>" >

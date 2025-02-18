@@ -199,10 +199,7 @@ include("header.php");
 														<label class="control-label"><strong><?php echo $CODIGO; ?></strong></label>
 															<input type="text" class="form-control" name="iso" id="Shipperiso" placeholder="<?php echo $L_['placeiso']; ?>" >
 													</div>
-													<div class="col-sm-3 form-group">
-														<label class="control-label"><strong>Sender City</strong></label>
-															<input  type="text"   class="form-control" id="Shipperciudad" name="ciudad"  placeholder="<?php echo $L_['placecity']; ?>" >
-													</div>
+
 
 
 
@@ -338,25 +335,12 @@ include("header.php");
 
 
 
-
-												<div class="col-sm-3 form-group">
-													<label class="control-label"><i class="fa fa-angle-double-right icon text-default-lter"></i>&nbsp;<strong><?php echo $PAISDESTINO; ?></strong></label>
-														<input  type="text"  class="form-control" name="paisdestino" id="Receivercountry1" placeholder="<?php echo $L_['placecountry1']; ?>" >
-												</div>
-												<div class="col-sm-3 form-group">
-													<label class="control-label"><strong><?php echo $L_STATE; ?></strong></label>
-													<input type="text" class="form-control" name="state1" id="Receiverstate1" placeholder="<?php echo $L_['placestate']; ?>" >
-
-												</div>
 												<div class="col-sm-3 form-group" style="display:none">
 													<label class="control-label"><strong><?php echo $CODIGO; ?></strong></label>
 														<input type="text" class="form-control" name="iso1"  id="Receiveriso1"  placeholder="<?php echo $L_['placeiso']; ?>" >
 												</div>
 
-												<div class="col-sm-3 form-group">
-													<label class="control-label"><strong><?php echo $CIUDAD; ?></strong></label>
-													<input type="text" class="form-control" name="city1"  id="Receivercity1" placeholder="<?php echo $L_['placecity']; ?>" >
-												</div>
+
 
 												<div class="col-sm-12 form-group">
 													<p class="error"></p>
