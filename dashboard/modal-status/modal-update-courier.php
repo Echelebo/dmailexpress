@@ -1,6 +1,6 @@
 <?php
 		    $cid = $_GET['cid'];
-			$consulta_mysql="SELECT cid,cons_no,ship_name,phone,email,correo
+			$consulta_mysql="SELECT cid,cons_no,ship_name,email,correo
 			FROM courier
 			WHERE  cid=cid";
 			$resultado_consulta_mysql=mysql_query($consulta_mysql);
@@ -34,12 +34,7 @@
 										<input type="text" class="form-control" id="field-6" name="user" value="<?php echo $_SESSION['user_name'] ;?>" readonly>
 									</div>
 								</div>
-								<div class="col-md-6">
-									<div class="form-group">
-										<label for="field-6" class="control-label"><?php echo $Usuario; ?></label>
-										<input type="text" class="form-control" id="field-6" name="phone" value="<?php echo $row['phone'] ;?>" readonly>
-									</div>
-								</div>
+
 							</div>
 							<div class="row"  style="display:none">
 								<div class="col-md-6">
