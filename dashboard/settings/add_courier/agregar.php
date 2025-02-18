@@ -138,7 +138,8 @@
 				}
 			}
 
-		$sql = "INSERT INTO courier (tracking,cons_no, letra,ship_name, s_add, locker, correo, rev_name, r_add, email, type, weight, weightx, shipping_subtotal, invice_no, qty, book_mode, declarado, mode, pick_date, schedule, pick_time, pick_time2, iso,
+
+		$sql = "INSERT INTO courier (tracking,cons_no, letra,ship_name, s_add, locker, correo, rev_name, r_add, email, type, weight, weightx, shipping_subtotal, invice_no, qty, book_mode, mode, pick_date, schedule, pick_time, pick_time2, iso,
 		state, ciudad, paisdestino, iso1, state1, city1, status, comments, officename, status_delivered, user, book_date, pesoreal)
 		VALUES('$cons_no','$cons_no', '$pre', '$Shippername', '$Shipperaddress', '$Shipperlocker', '$Shipperemail', '$Receivername', '$Receiveraddress', '$Receiveremail', '$Shiptype', '$Weight', '$Weightx', '$shipping_subtotal', '$Invoiceno', $Qnty, '$bookingmode', '$Mode', '$Packupdate', '$Schedule', '$Pickuptime', '$Pickuptime', '$iso', '$state', '$ciudad', '$paisdestino', '$iso1', '$state1', '$city1', '$status', '$Comments', '$officename', '$status_delivered', '$user', curdate(), '$pesoreal')";
 			//echo $sql;
