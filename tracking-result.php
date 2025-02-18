@@ -127,8 +127,8 @@ extract($data);
         <hr style="margin-top: 20px; border: none;">
         <div class="text-center mt-4">
 
-<h5 class="card-heading-x">Sender/Receiver Details</h5>
-<a href="contact.php" style="color:dodgerblue; margin-top: 0px;">Contact us now for more information on your package.</a><br /><br />
+<h5 class="card-heading-x" style="margin-bottom: 0px;">Sender/Receiver Details</h5>
+<a href="contact.php" style="color:dodgerblue; ">Contact us now for more information on your package.</a><br /><br />
 </div>
 <div class="text-left">
 <span style="margin-right: 20px;">Sender Name:</span><strong><?php echo strtoupper($ship_name); ?></strong><br /><br />
