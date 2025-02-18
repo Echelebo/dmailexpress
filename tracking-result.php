@@ -44,7 +44,7 @@ extract($data);
 
 
     <!-- Start #page-title-->
-    <section class="page-title bg-overlay bg-overlay-dark bg-parallax" id="page-title">
+    <section class="page-title bg-overlay-x bg-overlay-dark-x bg-parallax-x" id="page-title">
         <div class="bg-section"><img src="assets/images/page-titles/7.jpg" alt="Background"/></div>
         <div class="container">
           <div class="row">
